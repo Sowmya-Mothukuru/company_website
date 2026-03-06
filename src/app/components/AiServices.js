@@ -27,7 +27,7 @@ export default function AiServices() {
   ];
 
   return (
-    <section className="w-full bg-[#D9D9D9] flex justify-center h-[1098px]">
+    <section className="w-full bg-[#D9D9D9] flex justify-center pb-[40px]">
       <div className="w-[1257px] flex flex-col items-center pt-[100px]">
         {/* TITLE BLOCK */}
         <div className="w-[914px] text-center flex flex-col items-center font-['Space_Grotesk']">
@@ -58,10 +58,11 @@ export default function AiServices() {
           </div>
         </div>
 
-        {/* 48px spacing between bottom cards and View More button */}
+        {/* 96px spacing from bottom of cards to BOTTOM of button (48px height + 48px margin) */}
         <div className="mt-[48px] w-full flex justify-end">
-          <button className="px-[32px] py-[12px] bg-[#2E3B4E] text-white rounded-[12px] text-[16px] font-medium transition-opacity hover:opacity-90">
-            View More →
+          <button className="w-[254px] h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center gap-[10px] font-['Space_Grotesk'] font-normal text-[20px] leading-none transition-opacity hover:opacity-90">
+            <span>View More</span>
+            <span className="text-[20px]">→</span>
           </button>
         </div>
       </div>
