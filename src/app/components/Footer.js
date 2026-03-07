@@ -1,9 +1,106 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-10">
-      <div className="max-w-7xl mx-auto text-center">
-        <p>© 2026 Glitch Brainer. All rights reserved.</p>
+    <footer className="w-full max-w-[1298px] mx-auto bg-[#3E4C5E] rounded-[16px] flex flex-col justify-between">
+
+      {/* INNER CONTENT */}
+     {/* INNER CONTENT */}
+<div className="flex flex-wrap lg:flex-nowrap justify-between px-6 lg:px-[72px] pt-[60px] gap-12">
+
+        {/* LEFT SECTION */}
+        <div className="max-w-[441px] flex flex-col gap-[24px]">
+
+          <h2 className="text-white text-[20px] font-semibold">
+            Glitch Brainer
+          </h2>
+
+          <p className="text-[#929292] text-[14px] leading-[22px]">
+            We build scalable AI, data, and software solutions that help
+            businesses automate, optimize, and grow.
+          </p>
+
+          {/* CONTACT INFO */}
+          <div className="flex flex-col gap-[8px] text-[#E5E7EB] text-[14px]">
+
+            <div className="flex items-center gap-2">
+              <img src="/icons/tdesign_location.png" alt="location" className="w-[24px]" />
+              Bengaluru
+            </div>
+
+            <div className="flex items-center gap-2">
+              <img src="/icons/proicons_call.png" alt="phone" className="w-[24px]" />
+              +91 98765 43210
+            </div>
+
+            <div className="flex items-center gap-2">
+              <img src="/icons/material-symbols-light_mail-outline.png" alt="mail" className="w-[24px]" />
+              hello@Glitchbrainer.com
+            </div>
+
+          </div>
+
+          {/* SOCIAL ICONS */}
+          <div className="flex gap-[13px] pt-[6px]">
+            <img src="/icons/Group 90.png" alt="social" className="w-[33px]" />
+            <img src="/icons/Group 91.png" alt="social" className="w-[33px]" />
+            <img src="/icons/Group 92.png" alt="social" className="w-[33px]" />
+            <img src="/icons/Group 93.png" alt="social" className="w-[33px]" />
+          </div>
+
+          {/* BUTTON */}
+          <div className="pt-[10px]">
+            <button className="px-[18px] h-[48px] bg-white text-[#2F3E4E] text-[16px] rounded-[4px] flex items-center justify-center gap-2 mb-[86px]">
+              <img src="/icons/iconoir_fast-arrow-up.png" alt="arrow" className="w-[24px]" />
+              Back to Top
+            </button>
+          </div>
+
+        </div>
+
+
+        {/* RIGHT SECTION */}
+        <div className="flex flex-wrap md:flex-nowrap gap-[30px]">
+
+          {/* SITE MAP */}
+          <div className="flex flex-col gap-[27px]">
+
+            <h3 className="text-white font-semibold text-[22px]">
+              Site Map
+            </h3>
+
+            <ul className="flex flex-col gap-[18px] text-[#E5E7EB] text-[18px]">
+              <li>AI Services</li>
+              <li>Software Services</li>
+              <li>Industries We Serve</li>
+              <li>Why Choose Us</li>
+              <li>Contact Us</li>
+            </ul>
+
+          </div>
+
+          {/* LEGAL */}
+          <div className="flex flex-col gap-[27px]">
+
+            <h3 className="text-white font-semibold text-[22px]">
+              Legal
+            </h3>
+
+            <ul className="flex flex-col gap-[18px] text-[#E5E7EB] text-[18px]">
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+            </ul>
+
+          </div>
+
+        </div>
+
       </div>
+
+
+      {/* BOTTOM BAR */}
+      <div className="w-full min-h-[29px] bg-white text-center text-[13px] flex items-center justify-center rounded-bl-[16px] rounded-br-[16px] text-gray-600 py-1">
+        © Glitch Brainer 2025. All Rights Reserved
+      </div>
+
     </footer>
   );
 }
