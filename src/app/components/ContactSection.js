@@ -2,10 +2,10 @@ import React from "react";
 
 const ContactCard = () => {
   return (
-    <div className="w-full flex justify-center px-6">
+    <div className="w-full">
 
       {/* MAIN OUTER CONTAINER */}
-      <div className="max-w-[1257px] w-full flex flex-col items-center pt-20">
+    <div className="max-w-[1257px] mx-auto w-full px-6 flex flex-col items-center pt-[80px] gap-[40px]">
 
         {/* HEADER */}
         <header className="text-center mb-16 max-w-[722px] w-full">
@@ -19,17 +19,28 @@ const ContactCard = () => {
         </header>
 
         {/* FORM CARD */}
-        <div className="max-w-[1017px] w-full bg-white rounded-[20px] shadow-sm p-10 lg:p-16 flex flex-col gap-[20px]">
+       {/*} <div className="max-w-[1017px] w-full bg-white rounded-[20px] shadow-sm p-10 
+        lg:p-16 flex 
+        flex-col gap-[20px]">*/}
+     <div className="
+w-full
+bg-white
+rounded-[15px]
+shadow-sm
+px-6 md:px-12 lg:px-[120px]
+py-10 md:py-14 lg:py-[80px]
+">
+  <h2 className="text-[28px] font-bold text-black mb-4">
+   Drop us a line!
+</h2>
 
-          <h2 className="text-2xl font-bold text-black">
-            Drop us a line!
-          </h2>
-
-          {/* FORM FIELDS */}
-          <div className="flex flex-col lg:flex-row gap-[20px]">
+<div className="flex flex-col lg:flex-row gap-10 md:gap-14 lg:gap-[68px]">
 
             {/* LEFT */}
-            <div className="w-full lg:max-w-[446px] flex flex-col gap-[25px]">
+            {/*<div className="w-full lg:max-w-[446px] flex flex-col gap-[25px]">*/}
+            <div className="flex-1 flex flex-col gap-6">
+
+
 
               <div className="space-y-2">
                 <label className="block text-sm font-bold text-gray-800">
@@ -39,7 +50,8 @@ const ContactCard = () => {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full h-[63px] px-4 rounded-[8px] border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+                  className="w-full h-[63px] px-4 rounded-[8px] border border-gray-300
+                   placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
                 />
               </div>
 
@@ -67,7 +79,7 @@ const ContactCard = () => {
                 />
               </div>
 
-              <p className="text-gray-800 font-medium">
+              <p className="text-gray-800 font-medium whitespace-nowrap">
                 or send us an email to{" "}
                 <span className="font-bold">info@glichbrainer.com</span>
               </p>
@@ -75,7 +87,8 @@ const ContactCard = () => {
             </div>
 
             {/* RIGHT */}
-            <div className="w-full lg:max-w-[446px] flex flex-col gap-[20px]">
+            {/*<div className="w-full lg:max-w-[446px] flex flex-col gap-[20px]">*/}
+            <div className="flex-1 flex flex-col gap-6">
 
               <div className="space-y-2">
                 <label className="block text-sm font-bold text-gray-800">
@@ -115,28 +128,5 @@ const ContactCard = () => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default ContactCard;
 

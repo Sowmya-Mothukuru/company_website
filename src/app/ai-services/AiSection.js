@@ -31,6 +31,20 @@ export default function AiServices() {
       icon: "/star_icon.svg",
       width: "lg:flex-[4]",
     },
+    {
+      title: "AI Model Development",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      icon: "/star_icon.svg",
+      width: "lg:flex-[4]",
+    },
+    {
+      title: "AI Security",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      icon: "/charm_robot.svg",
+      width: "lg:flex-[6]",
+    },
   ];
 
   return (
@@ -52,6 +66,7 @@ export default function AiServices() {
 
         </div>
 
+
         {/* CARDS */}
         <div className="mt-[70px] w-full flex flex-col gap-6">
 
@@ -67,21 +82,11 @@ export default function AiServices() {
             <Card service={services[3]} />
           </div>
 
-        </div>
-
-        {/* BUTTON */}
-        <div className="mt-[50px] w-full flex justify-center lg:justify-end">
-
-          <Link href="/ai-services">
-
-            <button className="w-[200px] md:w-[240px] h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center gap-2 text-[16px] md:text-[18px] font-['Space_Grotesk'] hover:opacity-90 transition">
-
-              <span>View More</span>
-              <span>→</span>
-
-            </button>
-
-          </Link>
+          {/* ROW 3 */}
+          <div className="flex flex-col lg:flex-row gap-6">
+            <Card service={services[4]} />
+            <Card service={services[5]} />
+          </div>
 
         </div>
 
@@ -92,13 +97,15 @@ export default function AiServices() {
 }
 
 
+
 function Card({ service }) {
 
   return (
+
     <Link href="/ai-services" className={`w-full ${service.width}`}>
 
-      <div className="bg-white rounded-[24px] p-8 md:p-10 flex flex-col gap-6 min-h-[300px]
-      transition-all duration-300 hover:bg-[#2E3B4E] hover:text-white hover:shadow-lg">
+      <div className="bg-white rounded-[24px] p-8 md:p-10 flex flex-col gap-6 min-h-[300px] h-full
+transition-all duration-300 hover:bg-[#2E3B4E] hover:text-white hover:shadow-lg">
 
         {/* ICON */}
         <div className="w-[72px] h-[72px] bg-[#2E3B4E] rounded-full flex items-center justify-center">
@@ -111,7 +118,7 @@ function Card({ service }) {
 
         </div>
 
-        {/* TEXT */}
+        {/* CONTENT */}
         <div>
 
           <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-semibold leading-[30px]">

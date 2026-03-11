@@ -5,7 +5,6 @@ import IndustriesSection from "./components/Industries";
 import Testimonials from "./components/Testimonials";
 import SalonLanding from "./components/Showcase";
 import ContactCard from "./components/ContactSection";
-import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
@@ -15,14 +14,12 @@ export default function Home() {
        <IndustriesSection />
        <Testimonials/>
        <SalonLanding/>
-       {/* <div className="bg-[#D1D5DB] min-h-screen flex flex-col items-center gap-24 py-20">
-      <ContactCard />
-      <Footer />*/}
         {/* CONTACT + FOOTER SECTION */}
-      <section className="bg-[#D1D5DB] w-full py-20 px-6 md:px-10 lg:px-16 xl:px-20 flex flex-col items-center gap-24">
-        <ContactCard />
-        <Footer />
-      </section>
+      {/*<section className="bg-[#D4D4D4] w-full py-20 px-6 md:px-10 lg:px-16
+       xl:px-20 flex flex-col items-center gap-24">*/}
+       <section className="bg-[#D4D4D4] w-full py-20">
+  <ContactCard />
+</section>
        
     </>
   );
