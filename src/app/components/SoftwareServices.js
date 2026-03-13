@@ -52,16 +52,16 @@ export default function SoftwareServices() {
 
         {/* CARDS WRAPPER - 216px gap from paragraph */}
         <div className="mt-[82px] w-full">
-        <div className="flex gap-[18px] items-start justify-center">
+        <div className="grid grid-cols-[389px_1fr] gap-[18px] w-full">
             {/* FEATURED CARD */}
             <FeaturedCard />
 
             {/* SMALL CARDS GRID - 2x2 with 18px gap, w: 854px, h: 624px */}
 <div className="
-grid 
+grid
 grid-cols-2
-gap-[18px] 
-w-[854px]
+gap-[18px]
+w-full
 ">
               {smallCards.map((service, index) => (
                 <Card key={index} service={service} />
@@ -87,7 +87,8 @@ function FeaturedCard() {
     <div
       className="
       w-[389px]
-      min-h-[624px]
+      row-span-2
+      h-full
       rounded-[24px]
       flex
       flex-col
@@ -136,7 +137,7 @@ function Card({ service }) {
       className={`
         group
         w-full
-        min-h-[300px]
+       h-full min-h-[300px]
         rounded-[24px]
         flex flex-col
         items-center

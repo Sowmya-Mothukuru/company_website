@@ -18,13 +18,16 @@ export default function Navbar() {
       <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 md:px-10 lg:px-16 xl:px-20 py-6">
 
         {/* ================= LOGO ================= */}
-        <div className="w-[50px] h-[50px] rounded-full overflow-hidden shrink-0">
-          <img
-            src="/logo.png"
-            alt="Glitch Brainer Logo"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* ================= LOGO ================= */}
+<Link href="/">
+  <div className="w-[50px] h-[50px] rounded-full overflow-hidden shrink-0 cursor-pointer">
+    <img
+      src="/logo.png"
+      alt="Glitch Brainer Logo"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</Link>
 
 
         {/* ================= CENTER MENU ================= */}
@@ -42,11 +45,12 @@ export default function Navbar() {
           max-w-[470px]
           w-full
         "
-        >
-<Link href="/ai-services" className={linkStyle("/ai-services")}>
+>
+  <Link href="/ai-services" className={linkStyle("/ai-services")}>
   AI
 </Link>
-         <Link href="/services" className={linkStyle("/services")}>
+
+<Link href="/services" className={linkStyle("/services")}>
   Services
 </Link>
 
@@ -63,7 +67,7 @@ export default function Navbar() {
 
         {/* ================= CONTACT BUTTON ================= */}
         <Link
-          href="/contact"
+          href="/contact-us"
           className="px-[28px] h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center text-[16px] font-medium whitespace-nowrap"
         >
           Contact Us

@@ -93,27 +93,31 @@ export default function AiServices() {
 
 
 function Card({ service }) {
-
   return (
-    <Link href="/ai-services" className={`w-full ${service.width}`}>
+    <Link href="/ai-services" className={`w-full flex-1 ${service.width}`}>
 
-      <div className="bg-white rounded-[24px] p-8 md:p-10 flex flex-col gap-6 min-h-[300px]
-      transition-all duration-300 hover:bg-[#2E3B4E] hover:text-white hover:shadow-lg">
-
+      <div
+        className="
+        bg-white
+        rounded-[24px]
+        p-8 md:p-10
+        flex flex-col
+        gap-6
+        min-h-[300px]
+        h-full
+        transition-all duration-300
+        hover:bg-[#2E3B4E]
+        hover:text-white
+        hover:shadow-lg
+        "
+      >
         {/* ICON */}
         <div className="w-[72px] h-[72px] bg-[#2E3B4E] rounded-full flex items-center justify-center">
-
-          <img
-            src={service.icon}
-            alt="icon"
-            className="w-[32px] h-[32px]"
-          />
-
+          <img src={service.icon} alt="icon" className="w-[32px] h-[32px]" />
         </div>
 
-        {/* TEXT */}
+        {/* CONTENT */}
         <div>
-
           <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-semibold leading-[30px]">
             {service.title}
           </h3>
@@ -121,7 +125,6 @@ function Card({ service }) {
           <p className="mt-4 text-[16px] md:text-[18px] leading-[28px] text-[#5D5D5D] hover:text-white">
             {service.description}
           </p>
-
         </div>
 
       </div>
@@ -129,3 +132,4 @@ function Card({ service }) {
     </Link>
   );
 }
+  
