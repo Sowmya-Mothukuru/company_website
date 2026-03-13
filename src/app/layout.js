@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 
@@ -17,6 +18,9 @@ export default function RootLayout({ children }) {
       <body className={`${spaceGrotesk.className} bg-white`}>
         <Navbar />
         {children}
+        
+        <Footer/>
+      
       </body>
     </html>
   );

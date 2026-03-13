@@ -67,7 +67,7 @@ export default function IndustriesSection() {
   return (
     <section className="w-full">
 
-      {/* HEADER */}
+      {/* HEADER Data*/}
       <div className="mt-[55px] flex justify-center px-4">
         <div className="max-w-[963px] flex flex-col items-center gap-[28px] text-center">
 

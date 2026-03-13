@@ -129,4 +129,3 @@ py-10 md:py-14 lg:py-[80px]
   );
 };
 export default ContactCard;
-

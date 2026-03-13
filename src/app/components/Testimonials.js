@@ -26,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#E6E6E6] py-24 flex flex-col items-center overflow-hidden">
+    <section className="bg-[#D4D4D4] py-24 flex flex-col items-center overflow-hidden">
 
       {/* Title */}
       <h2 className="text-[36px] font-bold mb-16 font-[Space_Grotesk]">
