@@ -7,6 +7,7 @@ export default function AiServices() {
       title: "AI Strategy & Execution",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+         link: "/ai-services#ai-strategy",
       icon: "/star_icon.svg",
       width: "lg:flex-[4]",
     },
@@ -14,6 +15,7 @@ export default function AiServices() {
       title: "Generative & Conversational AI",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+         link: "/ai-services#generative-ai",
       icon: "/charm_robot.svg",
       width: "lg:flex-[6]",
     },
@@ -21,6 +23,7 @@ export default function AiServices() {
       title: "Advanced Analytics",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+         link: "/ai-services#advance-analytics",
       icon: "/carbon_analytics.svg",
       width: "lg:flex-[6]",
     },
@@ -28,6 +31,7 @@ export default function AiServices() {
       title: "Intelligent Automation",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+         link: "/ai-services#automation",
       icon: "/star_icon.svg",
       width: "lg:flex-[4]",
     },
@@ -94,8 +98,7 @@ export default function AiServices() {
 
 function Card({ service }) {
   return (
-    <Link href="/ai-services" className={`w-full flex-1 ${service.width}`}>
-
+    <Link href={service.link} className={`w-full flex-1 ${service.width}`}>
       <div
         className="
         bg-white
@@ -122,14 +125,12 @@ function Card({ service }) {
             {service.title}
           </h3>
 
-          <p className="mt-4 text-[16px] md:text-[18px] leading-[28px] text-[#5D5D5D] hover:text-white">
+          <p className="mt-4 text-[16px] md:text-[18px] leading-[28px] 
+          text-[#5D5D5D] group-hover:text-white hover:text-white">
             {service.description}
           </p>
         </div>
-
       </div>
-
     </Link>
   );
 }
-  

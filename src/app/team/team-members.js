@@ -33,8 +33,8 @@ export default function TeamMembersSection() {
       <div className="flex flex-col gap-[1rem]">
 
         {/* ROW 1 */}
-        <div className="overflow-hidden">
-          <div className="flex gap-[0.875rem] animate-scrollLeft">
+ <div className="overflow-hidden group">
+  <div className="flex gap-[0.875rem] animate-scrollMembers ">
             {[...teamMembers, ...teamMembers].map((member, index) => (
               <div
                 key={index}
@@ -69,8 +69,8 @@ export default function TeamMembersSection() {
         </div>
 
         {/* ROW 2 */}
-        <div className="overflow-hidden">
-           <div className="flex gap-[0.875rem] animate-scrollRight">
+<div className="overflow-hidden group">
+  <div className="flex gap-[0.875rem] animate-scrollMembers">
 
             {[...teamMembers, ...teamMembers].map((member, index) => (
               <div
@@ -106,4 +106,4 @@ export default function TeamMembersSection() {
 
     </section>
   );
-}
+} 

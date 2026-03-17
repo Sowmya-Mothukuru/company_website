@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="w-full bg-white py-[120px]">
+    <section  id="hero" className= "w-full bg-white py-[120px]">
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 xl:px-20 flex items-center justify-between gap-16">
 

@@ -4,7 +4,7 @@ import TeamMembersSection from "./team-members";
 import JoinTeamSection from "./JoinTeam";
 export default function TeamPage() {
   return (
-    <main>
+       <main>
       <TeamHeroSection />
       <TeamIntroSection/>
       <TeamMembersSection/>

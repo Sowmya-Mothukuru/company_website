@@ -36,7 +36,7 @@ export default function Testimonials() {
       {/* Scroll Container */}
       <div className="w-full overflow-hidden">
 
-        <div className="flex gap-[30px] w-max animate-scroll">
+        <div className="flex gap-[30px] w-max animate-scrollTestimonials">
 
           {[...testimonials, ...testimonials, ...testimonials].map((item, index) => (
             <div
@@ -75,6 +75,7 @@ export default function Testimonials() {
 
               {/* RIGHT */}
               <div className="w-[45%] flex flex-col justify-between p-10 relative">
+                 
 
                 <Image
                   src="/images/quote.jpg"
@@ -86,7 +87,7 @@ export default function Testimonials() {
 
                 <div></div>
 
-                <h3 className="w-[235px] text-[25px] 
+               <h3 className="w-[235px] text-[25px] 
                 font-bold leading-[100%] tracking-[-0.3px] font-[Space_Grotesk]">
                   {item.title}
                 </h3>

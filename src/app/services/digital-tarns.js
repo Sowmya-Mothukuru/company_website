@@ -2,7 +2,7 @@ import React from "react";
 
 const DigitalTrans = () => {
   return (
-    <section className="w-full bg-[#D4D4D4] flex justify-center py-[5rem] px-[1.5rem]">
+    <section className="w-full bg-[#D4D4D4] flex justify-center py-[7rem] px-[1.5rem]">
       
       {/* MAIN CONTAINER */}
       <div

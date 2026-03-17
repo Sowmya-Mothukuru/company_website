@@ -4,7 +4,8 @@ export default function Address() {
 
       <div
         className="
-        flex flex-col lg:flex-row
+        flex flex-col xl:flex-row
+        items-center xl:items-start
         w-full max-w-[79.5625rem]
         min-h-[38.941rem]
         rounded-[0.5rem]
@@ -14,155 +15,145 @@ export default function Address() {
         "
       >
 
-        {/* LEFT SVG */}
-        <div className="w-[24.3125rem] h-[34.375rem] flex items-center justify-center">
+        {/* LEFT MAP */}
+        <div className="w-full max-w-[24.3125rem] h-auto xl:h-[34.375rem] flex items-center justify-center">
           <img
             src="/icons/Map.svg"
             alt="Contact Illustration"
-            className="w-full h-full object-contain"
+            className="w-full h-auto xl:h-full object-contain"
           />
         </div>
 
-        {/* RIGHT SVG */}
-       {/* RIGHT SECTION */}
-<div className="relative w-[48.125rem] h-[36.066rem] flex items-center justify-center">
+        {/* RIGHT SECTION */}
+        <div className="relative w-full max-w-[48.125rem] h-auto xl:h-[36.066rem] flex items-center justify-center">
 
-  {/* PHONE SVG */}
-  <img
-    src="/images/Group 259.svg"
-    alt="Mobile Contact UI"
-    className="w-full h-full object-contain"
-  />
+          {/* PHONE FRAME */}
+          <img
+            src="/images/Group 259.svg"
+            alt="Mobile Contact UI"
+            className="w-full h-auto xl:h-full object-contain"
+          />
 
-  {/* PHONE INNER TITLE */}
- <div
-  className="
-  absolute
-  w-[14rem]
-  top-[5.5rem]
-  left-[55%]
-  -translate-x-1/2
-  flex flex-col
-  items-center
-  gap-[1rem]
-  "
->
-  {/* TITLE */}
- {/* GET IN TOUCH TITLE */}
-<h3
-className="
-w-[9rem]
-text-center
-font-spaceGrotesk
-font-medium
-text-[1.5rem]
-leading-[100%]
-text-black
-"
->
-Get In Touch
-</h3>
-  {/* ADDRESS ROW */}
-<div className="flex w-[13.875rem] gap-[1.25rem] items-start">
+          {/* PHONE SCREEN */}
+          <div
+            className="
+            absolute
+            bg-white
+            w-[15.9075rem]
+            h-[30.07125rem]
+            top-[3.854rem]
+            xl:left-[17.9375rem]
+            left-1/2 -translate-x-1/2 xl:translate-x-0
+            rounded-[1.5rem]
+            flex flex-col
+            items-center
+            pt-[2.5rem]
+            gap-[1.75rem]
+            z-10
+            "
+          >
 
-  <img
-    src="/icons/Address.svg"
-    alt="Address"
-    className="w-[2rem] h-[2rem]"
-  />
+            {/* TITLE */}
+            <h3
+              className="
+              w-[9rem]
+              text-center
+              font-spaceGrotesk
+              font-medium
+              text-[1.5rem]
+              leading-[100%]
+              text-black
+              "
+            >
+              Get In Touch
+            </h3>
 
-  <div className="flex flex-col w-[10.0625rem] h-[4.5625rem] gap-[0.375rem]">
+            {/* ADDRESS */}
+            <div className="flex w-[13.875rem] gap-[1.25rem] items-start">
+              <img
+                src="/icons/Address.svg"
+                alt="Address"
+                className="w-[2rem] h-[2rem]"
+              />
 
-    <p className="font-spaceGrotesk font-medium text-[1.25rem] leading-[100%]">
-      Address
-    </p>
+              <div className="flex flex-col w-[10.0625rem] gap-[0.375rem]">
+                <p className="font-spaceGrotesk font-medium text-[1.25rem]">
+                  Address
+                </p>
 
-    <p className="text-[0.875rem] text-[#6B7280] leading-[1.2]">
-      2464 Royal Ln. Mesa,
-      <br />
-      New Jersey 45463
-    </p>
+                <p className="text-[0.875rem] text-[#6B7280] leading-[1.2]">
+                  2464 Royal Ln. Mesa,
+                  <br />
+                  New Jersey 45463
+                </p>
+              </div>
+            </div>
 
-  </div>
-</div>
-{/*phone row */}
-<div className="flex w-[13.875rem] gap-[1.25rem] items-start">
+            {/* PHONE */}
+            <div className="flex w-[13.875rem] gap-[1.25rem] items-start">
+              <img
+                src="/icons/phone.svg"
+                alt="Phone"
+                className="w-[2rem] h-[2rem]"
+              />
 
-  <img
-    src="/icons/phone.svg"
-    alt="Phone"
-    className="w-[2rem] h-[2rem]"
-  />
+              <div className="flex flex-col w-[10.0625rem] gap-[0.375rem]">
+                <p className="font-spaceGrotesk font-medium text-[1.25rem]">
+                  Phone Number
+                </p>
 
-  <div className="flex flex-col w-[10.0625rem] h-[4.5625rem] gap-[0.375rem]">
+                <p className="text-[0.875rem] text-[#6B7280]">
+                  +91 98765 43210
+                </p>
+              </div>
+            </div>
 
-    <p className="font-spaceGrotesk font-medium text-[1.25rem] leading-[100%]">
-      Phone Number
-    </p>
+            {/* EMAIL */}
+            <div className="flex w-[13.875rem] gap-[1.25rem] items-start">
+              <img
+                src="/icons/Email.svg"
+                alt="Email"
+                className="w-[2rem] h-[2rem]"
+              />
 
-    <p className="text-[0.875rem] text-[#6B7280]">
-      +91 98765 43210
-    </p>
+              <div className="flex flex-col w-[10.0625rem] gap-[0.375rem]">
+                <p className="font-spaceGrotesk font-medium text-[1.25rem]">
+                  E-mail
+                </p>
 
-  </div>
-</div>
+                <p className="text-[0.875rem] text-[#6B7280]">
+                  hello@Glitchbrainer.com
+                </p>
+              </div>
+            </div>
 
-{/*phone row */}<div className="flex w-[13.875rem] gap-[1.25rem] items-start">
-  <img
-    src="/icons/Email.svg"
-    alt="Email"
-    className="w-[2rem] h-[2rem]"
-  />
+            {/* FOLLOW US */}
+            <div className="flex flex-col items-center gap-[0.8125rem] pt-[1.25rem]">
 
-  <div className="flex flex-col w-[10.0625rem] h-[4.5625rem] gap-[0.375rem]">
+              <p
+                className="
+                font-spaceGrotesk
+                font-medium
+                text-[1.25rem]
+                leading-[100%]
+                text-black
+                "
+              >
+                Follow Us
+              </p>
 
-    <p className="font-spaceGrotesk font-medium text-[1.25rem] leading-[100%]">
-      E-mail
-    </p>
+              <div className="flex gap-[0.8125rem]">
+                <img src="/icons/FaceBook.svg" className="w-[2rem] h-[2rem]" />
+                <img src="/icons/Instagram.svg" className="w-[2rem] h-[2rem]" />
+                <img src="/icons/X.svg" className="w-[2rem] h-[2rem]" />
+                <img src="/icons/Linkindin.svg" className="w-[2rem] h-[2rem]" />
+              </div>
 
-    <p className="text-[0.875rem] text-[#6B7280]">
-      hello@Glitchbrainer.com
-    </p>
+            </div>
 
-  </div>
-</div>
-</div>
-  {/* FOLLOW */}
-  <p
-className="
-absolute
-w-[10.6875rem]
-h-[1.625rem]
-top-[27.0625rem]
-left-[20.5625rem]
-font-spaceGrotesk
-font-medium
-text-[1.25rem]
-leading-[100%]
-text-black
-"
->
-Follow Us:
-</p>
-<div
-className="
-absolute
-flex
-w-[10.6875rem]
-h-[2.0625rem]
-top-[29.6875rem]
-left-[20.5625rem]
-gap-[0.8125rem]
-"
->
-  <img src="/icons/FaceBook.svg" className="w-[2rem] h-[2rem]" />
-  <img src="/icons/Instagram.svg" className="w-[2rem] h-[2rem]" />
-  <img src="/icons/X.svg" className="w-[2rem] h-[2rem]" />
-  <img src="/icons/Linkindin.svg" className="w-[2rem] h-[2rem]" />
-</div>
-</div>
-</div>
-</section>
-);
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
-

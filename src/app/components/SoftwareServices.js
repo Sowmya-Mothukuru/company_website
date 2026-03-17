@@ -1,8 +1,10 @@
+import Link from "next/link";
 export default function SoftwareServices() {
   const smallCards = [
     {
       title: "Software Development",
       description: "Custom software crafted for performance and scale",
+      link: "/services#software-development",
       image: "/rafiki.svg",
       dark: false,
       imgSize: { w: '235px', h: '183.9997px', top: '34px', left: '90px' },
@@ -14,6 +16,7 @@ export default function SoftwareServices() {
     {
       title: "Product Engineering & MVPs",
       description: "Convert data into actionable insights",
+       link: "/services#product-eng",
       image: "/bro.svg",
       dark: false,
       imgSize: { w: '224.0953px', h: '173.9961px', top: '41px', left: '97px' },
@@ -25,6 +28,7 @@ export default function SoftwareServices() {
     {
       title: "Cloud Engineering, DevOps",
       description: "Optimize your infrastructure with our cloud engineering and DevOps solutions.",
+      link: "/services#cloud-eng",
       image: "/rafiki2.svg",
       dark: false,
     },
@@ -32,6 +36,7 @@ export default function SoftwareServices() {
       title: "UI/UX Design",
       description: "Create stunning user experiences with our professional UI/UX design services.",
       image: "/rafiki4.png",
+      link: "/services#ui-ux",
       dark: false,
     },
   ];
@@ -72,10 +77,13 @@ w-full
 
         {/* VIEW MORE BUTTON - Align right under cards */}
        <div className="mt-[48px] w-full flex justify-end">
-          <button className="w-[254px] h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center gap-[10px] font-['Space_Grotesk'] font-normal text-[20px] leading-none transition-opacity hover:opacity-90">
-            <span>View More</span>
-            <span className="text-[20px]">→</span>
-          </button>
+          <Link
+  href="/services"
+  className="w-[254px] h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center gap-[10px] font-['Space_Grotesk'] font-normal text-[20px] leading-none transition-opacity hover:opacity-90"
+>
+  <span>View More</span>
+  <span className="text-[20px]">→</span>
+</Link>
         </div>
       </div>
     </section>
@@ -132,19 +140,18 @@ function FeaturedCard() {
 function Card({ service }) {
   const isDark = service.dark;
 
-  return (
+  const cardContent = (
     <div
       className={`
         group
         w-full
-       h-full min-h-[300px]
+        h-full min-h-[300px]
         rounded-[24px]
         flex flex-col
         items-center
         justify-between
         p-[32px]
         transition-all duration-300
-        
         ${isDark ? "bg-[#334155]" : "bg-white"}
         hover:bg-[#2E3B4E]
       `}
@@ -159,7 +166,7 @@ function Card({ service }) {
         />
       </div>
 
-      {/* TEXT CONTENT */}
+      {/* TEXT */}
       <div className="text-center flex flex-col items-center">
         <h3
           className={`
@@ -183,12 +190,22 @@ function Card({ service }) {
             max-w-[280px]
             leading-[22px]
             transition-colors
-            group-hover:text-white
+           
+            hover:text-white
           "
         >
           {service.description}
         </p>
       </div>
     </div>
+  );
+
+  // Only wrap with Link if link exists
+  return service.link ? (
+    <Link href={service.link} className="block">
+      {cardContent}
+    </Link>
+  ) : (
+    cardContent
   );
 }

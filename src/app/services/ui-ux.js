@@ -2,7 +2,7 @@ import React from "react";
 
 const UiUx = () => {
   return (
-    <section className="w-full bg-[#D4D4D4] flex justify-center py-[5rem] px-[1.5rem]">
+    <section  id="ui-ux" className="w-full bg-[#D4D4D4] flex justify-center py-[7rem] px-[1.5rem]">
       
       {/* MAIN CONTAINER */}
       <div
