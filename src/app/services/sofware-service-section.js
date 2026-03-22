@@ -49,7 +49,7 @@ export default function SoftwareServices() {
   ];
 
   return (
-    <section className="w-full bg-[#D4D4D4] flex justify-center min-h-[1210px] pb-[100px]">
+    <section className="w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px]">
       <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px]">
 
         {/* TITLE BLOCK */}

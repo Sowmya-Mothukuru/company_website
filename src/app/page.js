@@ -17,7 +17,7 @@ export default function Home() {
         {/* CONTACT + FOOTER SECTION */}
       {/*<section className="bg-[#D4D4D4] w-full py-20 px-6 md:px-10 lg:px-16
        xl:px-20 flex flex-col items-center gap-24">*/}
-       <section className="bg-[#D4D4D4] w-full py-20">
+       <section className="bg-[#F8FBFF] w-full py-20">
   <ContactCard />
 </section>
        

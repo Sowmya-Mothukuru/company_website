@@ -5,10 +5,12 @@ import CloudEng from "./cloud-eng";
 import UiUx from "./ui-ux";
 import DataEng from "./data-eng";
 import DigitalTrans from "./digital-tarns";
+import Navbar from "../components/Navbar";
 
 export default function ServicesPage() {
   return (
     <main>
+      <Navbar/>
       <SoftwareServices/>
       <CustomSoftware/>
       <ProductEng/>

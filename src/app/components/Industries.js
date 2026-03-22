@@ -108,7 +108,7 @@ export default function IndustriesSection() {
 >
           {/* ROW 1 */}
           <div className="overflow-hidden">
-            <div className="flex gap-[20px] w-max animate-scrollRight">
+            <div className="flex gap-[20px] w-max animate-scrollLeft">
               {[...row1, ...row1, ...row1].map((item, index) => (
                 <Capsule key={index} text={item.text} icon={item.icon} />
               ))}
@@ -117,7 +117,7 @@ export default function IndustriesSection() {
 
           {/* ROW 2 */}
           <div className="overflow-hidden">
-            <div className="flex gap-[20px] w-max animate-scrollLeft">
+            <div className="flex gap-[20px] w-max animate-scrollRight">
               {[...row2, ...row2, ...row2].map((item, index) => (
                 <Capsule key={index} text={item.text} icon={item.icon} />
               ))}
@@ -126,7 +126,7 @@ export default function IndustriesSection() {
 
           {/* ROW 3 */}
           <div className="overflow-hidden">
-            <div className="flex gap-[20px] w-max animate-scrollRight">
+            <div className="flex gap-[20px] w-max animate-scrollLeft">
               {[...row3, ...row3, ...row3].map((item, index) => (
                 <Capsule key={index} text={item.text} icon={item.icon} />
               ))}

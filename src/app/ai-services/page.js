@@ -5,10 +5,12 @@ import AdvancedAnalytics from "./AdvancedAnalytics";
 import IntelligenceAuto from "./IntelligentAutomation";
 import Aimodel from "./Aimodel";
 import AiSecurity from "./AiSecurity";
+import Navbar from "../components/Navbar";
 
 export default function AIServicesPage() {
   return (
     <main>
+      <Navbar/>
       <AiServices />
       <AIStrategySection/>
       <GenerativeAi/>

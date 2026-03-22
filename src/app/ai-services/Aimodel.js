@@ -1,14 +1,14 @@
 import Image from "next/image";
 export default function AiModel(){
   return (
-    <section className="w-full flex justify-center py-[80px] bg-[#D4D4D4]">
+    <section className="w-full flex justify-center py-[100px] bg-[#F8FBFFs]">
       
       {/* MAIN CONTAINER */}
       <div className="w-full max-w-[1269px] flex flex-col lg:flex-row items-center 
       lg:items-start gap-[60px] lg:gap-[109px] px-6">
 
         {/* LEFT IMAGE */}
-        <div className="flex-shrink-0  bg-[#D4D4D4] bg-transparent">
+        <div className="flex-shrink-0  bg-[#F8FBFF] bg-transparent">
 <Image
             src="/images/report/amico.svg"
             alt="AI Strategy Illustration"
