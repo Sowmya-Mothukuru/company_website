@@ -1,6 +1,6 @@
 export default function TeamIntroSection() {
   return (
-    <section className="w-full flex justify-center py-[5rem] bg-[#D4D4D4] px-6 lg:px-8 xl:px-0">
+    <section className="w-full flex justify-center py-[5rem] bg-[#F8FBFF] px-6 lg:px-8 xl:px-0">
 
       <div className="flex flex-col items-center gap-[1.75rem] max-w-[50.0625rem] w-full text-center">
 

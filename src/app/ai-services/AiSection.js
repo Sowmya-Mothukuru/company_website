@@ -48,7 +48,7 @@ export default function AiServices() {
   ];
 
   return (
-    <section className="w-full bg-[#D4D4D4] flex justify-center py-[80px]">
+    <section className="w-full bg-[#F8FBFF] flex justify-center py-[80px]">
 
       <div className="max-w-[1257px] w-full px-6 flex flex-col items-center">
 

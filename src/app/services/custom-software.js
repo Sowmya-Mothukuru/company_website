@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomSoftware = () => {
   return (
-    <section  id="software-development" className="w-full bg-[#D4D4D4] flex justify-center
+    <section  id="software-development" className="w-full bg-[#F8FBFF] flex justify-center
      py-[7rem] px-[1.5rem]">
       
       {/* MAIN CONTAINER */}

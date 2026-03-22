@@ -42,7 +42,43 @@ export default function SoftwareServices() {
   ];
 
   return (
-    <section className="w-full bg-[#D4D4D4] flex justify-center min-h-[1210px] pb-[100px]">
+   // <section className="w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px]">
+   <section className="relative w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px] overflow-hidden">
+
+  {/* 🔷 BLOB 1 (LEFT TOP) */}
+  <img
+    src="/icons/software-s-blob.svg"
+    alt="blob"
+    className="
+      absolute
+      top-[0rem]
+      left-[-8.875rem]
+      w-[25.125rem]
+      h-auto
+      opacity-30
+      z-0
+      pointer-events-none
+    "
+  />
+
+  {/* 🔷 BLOB 2 (RIGHT BOTTOM) */}
+  <img
+    src="/icons/software-s-r-blob.svg"
+    alt="blob"
+    className="
+      absolute
+      bottom-[-6rem]
+      right-[-6rem]
+      w-[43.375rem]
+      h-auto
+      opacity-30
+      z-0
+      pointer-events-none
+    "
+  />
+
+  {/* EXISTING CONTENT */}
+  <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px] relative z-10"></div>
       <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px]">
 
         {/* TITLE BLOCK */}

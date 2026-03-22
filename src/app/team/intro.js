@@ -1,6 +1,6 @@
 export default function TeamHeroSection() {
   return (
-    <section className="w-full flex justify-center py-[5rem] bg-[#D4D4D4] px-6 lg:px-8 xl:px-0">
+    <section className="w-full flex justify-center py-[8rem] bg-[#F8FBFF] px-6 lg:px-8 xl:px-0">
 
       <div className="flex flex-col lg:flex-row items-center gap-[1.625rem] max-w-[75.4375rem] w-full">
 

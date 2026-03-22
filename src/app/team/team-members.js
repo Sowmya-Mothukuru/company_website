@@ -28,7 +28,7 @@ export default function TeamMembersSection() {
   ];
 
   return (
-    <section className="w-full py-[5rem] bg-[#D4D4D4] overflow-hidden">
+    <section className="w-full py-[5rem] bg-[#F8FBFF] overflow-hidden">
 
       <div className="flex flex-col gap-[1rem]">
 

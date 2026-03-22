@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function GenerativeAi() {
   return (
-    <section  id="generative-ai" className="w-full flex justify-center py-[100px] bg-[#D4D4D4]">
+    <section  id="generative-ai" className="w-full flex justify-center py-[100px] bg-[#F8FBFF]">
       
       {/* MAIN CONTAINER */}
       <div className="w-full max-w-[1269px] flex flex-col lg:flex-row-reverse lg:flex-row items-center 
