@@ -24,10 +24,10 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
+export default function Testimonials() { 
   return (
-    <section className="bg-[#F8FBFF] py-24 flex flex-col items-center overflow-hidden">
-
+    //<section className="bg-[#F8FBFF] py-24 flex flex-col items-center overflow-hidden">
+    <section className="relative bg-[#F8FBFF] py-24 flex flex-col items-center overflow-hidden">
       {/* Title */}
       <h2 className="text-[36px] font-bold mb-16 font-[Space_Grotesk]">
         Testimonials
@@ -35,6 +35,24 @@ export default function Testimonials() {
 
       {/* Scroll Container */}
       <div className="w-full overflow-hidden">
+    
+<img
+  src="/icons/testmonials-b.svg"
+  alt="blob"
+  className="
+    absolute
+    top-[1.5rem] md:top-[2rem] lg:top-[2rem]
+    left-[-4rem] md:left-[-5rem] lg:left-[-6rem]
+
+    w-[15rem] md:w-[22rem] lg:w-[25.125rem] xl:w-[28rem]
+
+    h-auto
+    opacity-30
+    z-0
+    pointer-events-none
+  "
+/>
+      
 
         <div className="flex gap-[30px] w-max animate-scrollTestimonials">
 

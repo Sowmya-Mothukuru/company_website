@@ -2,10 +2,33 @@ import React from "react";
 
 const ContactCard = () => {
   return (
-    <div className="w-full">
+    //<div className="w-full">
+    //<div className="relative w-full overflow-visible">
+<div className="relative overflow-hidden">
+  <div className="overflow-x-visible">
+   <img
+        src="/icons/contact-us-b-r.svg"
+        alt="background blob"
+        className="
+          absolute
+          top-[-8rem]
+          right-[-8rem]
 
+          w-[35rem]
+          sm:w-[22rem]
+          md:w-[24rem]
+          lg:w-[26rem]
+          xl:w-[28.7rem]
+
+          opacity-30
+          z-0
+          pointer-events-none
+        "
+      />
+      </div>
       {/* MAIN OUTER CONTAINER */}
     <div className="max-w-[1257px] mx-auto w-full px-6 flex flex-col items-center pt-[80px] gap-[40px]">
+      
 
         {/* HEADER */}
         <header className="text-center mb-16 max-w-[722px] w-full">

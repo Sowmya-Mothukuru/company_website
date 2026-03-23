@@ -43,23 +43,21 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section className="w-full bg-[#F8FBFF] flex justify-center py-12 md:py-16 lg:py-20">
+    <section className="relative w-full bg-[#F8FBFF] flex justify-center py-12 md:py-16 lg:py-3 overflow-hidden">
 
-      {/* RESPONSIVE CONTAINER */}
+      {/* 🔷 MAIN CONTENT */}
       <div
         className="
-          relative
+          relative z-10
           w-full
           max-w-[1016px]
-
           h-[420px]
           md:h-[520px]
           lg:h-[600px]
           xl:h-[640px]
         "
       >
-
-        {/* ICONS BACKGROUND */}
+        {/* ICON BACKGROUND */}
         <Image
           src="/images/contact-intro.svg"
           alt="icons"
@@ -95,27 +93,23 @@ export default function ContactUs() {
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 md:px-6">
           <p
             className="
-              font-playfair
+              font-Playfair
+              font-semibold
 
-              text-[24px]
-              sm:text-[28px]
-              md:text-[32px]
-              lg:text-[36px]
-              xl:text-[40px]
+              text-[28px]
+              sm:text-[32px]
+              md:text-[36px]
+              lg:text-[42px]
+              xl:text-[48px]
 
-              leading-[120%]
-              tracking-[-0.3px]
-              text-[#3A4754]
-
-              max-w-[90%]
-              md:max-w-[640px]
-              lg:max-w-[720px]
+              leading-[110%]
+              text-[#334155]
+              text-center
             "
           >
             Every great collaboration starts with a conversation.
           </p>
         </div>
-
       </div>
 
     </section>

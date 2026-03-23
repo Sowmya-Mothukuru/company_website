@@ -6,6 +6,7 @@ export default function ContactUsPage() {
   return (
     <main>
       <Navbar/>
+      <div className="h-[180px] xl:h-[213px]" />
       <ContactUs/>
       <section className="bg-[#F8FBFF] w-full py-20">
   <ContactCard />

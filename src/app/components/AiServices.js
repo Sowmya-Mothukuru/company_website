@@ -125,7 +125,7 @@ function Card({ service }) {
         p-8 md:p-10
         flex flex-col
         gap-6
-        min-h-[18.75rem]
+        min-h-[20rem]
         h-full
         transition-all duration-300
         hover:bg-[#2E3B4E]

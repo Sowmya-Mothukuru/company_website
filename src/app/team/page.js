@@ -7,6 +7,7 @@ export default function TeamPage() {
   return (
        <main>
         <Navbar/>
+        <div className="h-[180px] xl:h-[213px]" />
       <TeamHeroSection />
       <TeamIntroSection/>
       <TeamMembersSection/>
