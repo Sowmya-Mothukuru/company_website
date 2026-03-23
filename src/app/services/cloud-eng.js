@@ -2,7 +2,7 @@ import React from "react";
 
 const CloudEng = () => {
   return (
-    <section  id ="cloud-eng" className="w-full bg-[#F8FBFF] flex justify-center py-[7rem] px-[1.5rem]">
+    <section  id ="cloud-eng" className="w-full bg-[#F8FBFF] flex justify-center py-[15rem] px-[1.5rem]">
       
       {/* MAIN CONTAINER */}
       <div

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductEng = () => {
   return (
-    <section  id ="product-eng"className="w-full bg-[#F8FBFF] flex justify-center py-[7rem] px-[1.5rem]">
+    <section  id ="product-eng"className="w-full bg-[#F8FBFF] flex justify-center py-[15rem] px-[1.5rem]">
       
       {/* MAIN CONTAINER */}
       <div

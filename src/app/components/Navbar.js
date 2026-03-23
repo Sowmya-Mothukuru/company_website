@@ -5,86 +5,103 @@ import { usePathname } from "next/navigation";
 export default function Navbar({ variant = "default" }) {
   const pathname = usePathname();
 
-  const linkStyle = (path) =>
-    `px-4 py-1 rounded-full text-[15px] md:text-[16px] font-medium whitespace-nowrap transition-all duration-300
+  // ✅ Responsive nav item
+  const navItemClass = (path) => `
+    flex items-center justify-center
+    h-[34px] xl:h-[38px]
+    px-[12px] xl:px-[18px]
+    rounded-[24px]
+    text-[14px] xl:text-[15px]
+    font-[500]
+    whitespace-nowrap
+    transition-all duration-300
     ${
       pathname === path
-        ? "bg-[#334155] text-white"
-        : variant === "hero"
-        ? "text-[#2F3E4E] hover:bg-[#334155] hover:text-white"
-        : "text-black hover:bg-[#334155] hover:text-white"
-    }`;
-
-  return (
-   // <nav className="relative w-full z-50">
-   <nav className={`w-full z-50 ${variant !== "hero" ? "sticky top-0" : "relative"}`}>
-
-      {/* BACKGROUND (only for inner pages) */}
+        ? "bg-[#334155] text-white px-[20px] xl:px-[48px]"
+        : "text-[#2F3E4E] hover:bg-gray-200"
+    }
+  `;
+return (
+   // <nav className="w-full relative z-50 h-[180px] xl:h-[213px]">
+  <nav
+  className={`
+    w-full z-50 h-[180px] xl:h-[213px]
+    
+    ${variant !== "hero" ? "fixed top-0 left-0" : "relative"}
+  `}
+  >
       {variant !== "hero" && (
         <img
           src="/images/nav-bag.svg"
           alt="nav bg"
-          className="absolute top-0 left-0 w-full h-auto pointer-events-none"
+          className="absolute top-0 left-0 w-full h-[120%] object-cover"
         />
       )}
-
-      {/* CONTENT */}
       <div className="
-        relative
-        max-w-[1440px]
-        mx-auto
-        flex items-center justify-between
-        px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20
-        pt-4 md:pt-6 pb-6
+        relative max-w-[1440px] mx-auto h-full
+        flex items-start justify-between
+        px-4 sm:px-6 lg:px-10 xl:px-16
+        pt-[24px] xl:pt-[32px]
       ">
-
-        {/* LOGO */}
         <Link href="/">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" className="w-[36px] md:w-[44px]" />
-            <span className={`font-semibold tracking-wide hidden sm:block ${
-              variant === "hero" ? "text-white" : "text-white"
-            }`}>
-              GLITCH BRAINER
-            </span>
+          <div className="flex items-center gap-[6px] h-[50px] xl:h-[55px]">
+
+            <img
+              src="/icons/Logo.svg"
+              alt="logo icon"
+              className="h-[36px] xl:h-[44px] w-auto"
+            />
+
           </div>
         </Link>
 
-        {/* MENU */}
-        <div className="
-          flex items-center
-          gap-2 md:gap-4 lg:gap-6
-          px-4 md:px-6 lg:px-8
-          py-1
-          h-[40px] md:h-[48px]
-          bg-white/90
-          backdrop-blur-md
-          rounded-full
-          shadow-sm
-          flex-shrink-0
-        ">
-          <Link href="/ai-services" className={linkStyle("/ai-services")}>AI</Link>
-          <Link href="/services" className={linkStyle("/services")}>Services</Link>
-          <Link href="/our-work" className={linkStyle("/our-work")}>Our Work</Link>
-          <Link href="/team" className={linkStyle("/team")}>Team</Link>
+        {/* ✅ MENU */}
+       <div className="
+  flex items-center
+  w-auto
+  min-w-[380px] xl:min-w-[498px]
+  h-[44px] xl:h-[48px]
+  px-[12px] xl:px-[18px]
+  gap-[16px] lg:gap-[24px] xl:gap-[42px]
+  bg-white backdrop-blur-md
+  rounded-[50px]
+  shadow-sm
+">
+
+          <Link href="/ai-services" className={navItemClass("/ai-services")}>
+            AI
+          </Link>
+
+          <Link href="/services" className={navItemClass("/services")}>
+            Services
+          </Link>
+
+          <Link href="/our-work" className={navItemClass("/our-work")}>
+            Our Work
+          </Link>
+
+          <Link href="/team" className={navItemClass("/team")}>
+            Team
+          </Link>
+
         </div>
 
-        {/* BUTTON */}
+        {/* ✅ CONTACT */}
         <Link
           href="/contact-us"
-          className={`
-            px-4 md:px-6 lg:px-[28px]
-            h-[40px] md:h-[48px]
-            text-sm md:text-base
-            rounded-[12px] md:rounded-[16px]
+          className="
             flex items-center justify-center
-            font-medium
-            ${
-              variant === "hero"
-                ? "bg-white text-[#2F3E4E]"
-                : "bg-white text-[#2F3E4E]"
-            }
-          `}
+            w-[140px] lg:w-[180px] xl:w-[224px]
+            h-[44px] xl:h-[48px]
+            px-[12px] xl:px-[18px]
+            rounded-[14px] xl:rounded-[16px]
+            bg-white text-[#2F3E4E]
+            font-[500]
+            text-[14px] xl:text-[15px]
+            shadow-sm
+            hover:bg-gray-100
+            transition-all
+          "
         >
           Contact Us
         </Link>

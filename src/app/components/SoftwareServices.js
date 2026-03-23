@@ -45,43 +45,43 @@ export default function SoftwareServices() {
    // <section className="w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px]">
    <section className="relative w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px] overflow-hidden">
 
-  {/* 🔷 BLOB 1 (LEFT TOP) */}
-  <img
-    src="/icons/software-s-blob.svg"
-    alt="blob"
-    className="
-      absolute
-      top-[0rem]
-      left-[-8.875rem]
-      w-[25.125rem]
-      h-auto
-      opacity-30
-      z-0
-      pointer-events-none
-    "
-  />
+  {/* 🔷 BLOB 1 (TOP LEFT - EXACT LOOK) */}
+<img
+  src="/icons/software-s-blob.svg"
+  alt="blob"
+  className="
+    absolute
+    top-[1.5rem] md:top-[2rem] lg:top-[2rem]
+    left-[-4rem] md:left-[-5rem] lg:left-[-6rem]
 
-  {/* 🔷 BLOB 2 (RIGHT BOTTOM) */}
-  <img
-    src="/icons/software-s-r-blob.svg"
-    alt="blob"
-    className="
-      absolute
-      bottom-[-6rem]
-      right-[-6rem]
-      w-[43.375rem]
-      h-auto
-      opacity-30
-      z-0
-      pointer-events-none
-    "
-  />
+    w-[18rem] md:w-[22rem] lg:w-[25.125rem] xl:w-[28rem]
 
-  {/* EXISTING CONTENT */}
-  <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px] relative z-10"></div>
-      <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px]">
+    h-auto
+    opacity-30
+    z-0
+    pointer-events-none
+  "
+/>
 
-        {/* TITLE BLOCK */}
+<img
+  src="/icons/software-s-r.svg"
+  alt="blob"
+  className="
+    absolute
+
+    bottom-[0rem]
+    right-[0rem]
+    top-[50rem] md:top-[52rem] lg:top-[55rem]
+
+    w-[16rem] md:w-[18rem] lg:w-[20rem] xl:w-[24rem]
+
+    h-auto
+    opacity-30
+    z-0
+    pointer-events-none
+  "
+/>
+  <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px] relative z-10">
         <div className="w-full max-w-[963px] flex flex-col items-center gap-[28px] px-4">
        <h2 className="font-['Space_Grotesk'] font-bold text-[36px] text-black w-full text-center">
             Software Services
@@ -90,28 +90,21 @@ export default function SoftwareServices() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-
-        {/* CARDS WRAPPER - 216px gap from paragraph */}
         <div className="mt-[82px] w-full">
-        <div className="grid grid-cols-[389px_1fr] gap-[18px] w-full">
-            {/* FEATURED CARD */}
-            <FeaturedCard />
+  <div className="grid grid-cols-[389px_1fr_1fr] grid-rows-2 gap-[18px] w-full">
 
-            {/* SMALL CARDS GRID - 2x2 with 18px gap, w: 854px, h: 624px */}
-<div className="
-grid
-grid-cols-2
-gap-[18px]
-w-full
-">
-              {smallCards.map((service, index) => (
-                <Card key={index} service={service} />
-              ))}
-            </div>
-          </div>
-        </div>
+    {/* LEFT BIG CARD */}
+    <div className="row-span-2">
+      <FeaturedCard />
+    </div>
 
-        {/* VIEW MORE BUTTON - Align right under cards */}
+    {/* RIGHT 4 CARDS */}
+    {smallCards.map((service, index) => (
+      <Card key={index} service={service} />
+    ))}
+
+  </div>
+</div>
        <div className="mt-[48px] w-full flex justify-end">
           <Link
   href="/services"
@@ -145,7 +138,6 @@ function FeaturedCard() {
         background: "linear-gradient(to bottom, #334155, #367FA6)",
       }}
     >
-      {/* TEXT CONTENT */}
       <div className="flex flex-col gap-[16px] items-center">
         <span className="font-['Space_Grotesk'] font-light text-[20px] uppercase text-white">
           FEATURED SERVICES
@@ -160,8 +152,6 @@ function FeaturedCard() {
           to your business needs.
         </p>
       </div>
-
-      {/* IMAGE */}
       <div className="flex justify-center mt-[24px]">
         <img
           src="/amico.svg"
@@ -181,7 +171,7 @@ function Card({ service }) {
       className={`
         group
         w-full
-        h-full min-h-[300px]
+        h-full 
         rounded-[24px]
         flex flex-col
         items-center
@@ -193,7 +183,6 @@ function Card({ service }) {
       `}
       style={!isDark ? { boxShadow: "0px 0px 2px rgba(0,0,0,0.25)" } : {}}
     >
-      {/* IMAGE */}
       <div className="w-full flex justify-center mb-[16px]">
         <img
           src={service.image}
@@ -201,8 +190,6 @@ function Card({ service }) {
           className="max-h-[180px] object-contain"
         />
       </div>
-
-      {/* TEXT */}
       <div className="text-center flex flex-col items-center">
         <h3
           className={`

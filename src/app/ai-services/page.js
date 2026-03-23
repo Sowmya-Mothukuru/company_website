@@ -11,6 +11,7 @@ export default function AIServicesPage() {
   return (
     <main>
       <Navbar/>
+<div className="h-[180px] xl:h-[213px]" />
       <AiServices />
       <AIStrategySection/>
       <GenerativeAi/>

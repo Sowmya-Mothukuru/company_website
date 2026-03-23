@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function AdvancedAnalytics() {
   return (
-    <section  id="advance-analytics" className="w-full flex justify-center py-[100px] bg-[#F8FBFF]">
+    <section  id="advance-analytics" className="w-full flex justify-center py-[200px] bg-[#F8FBFF]">
       
       {/* MAIN CONTAINER */}
       <div className="w-full max-w-[1269px] flex flex-col lg:flex-row items-center 

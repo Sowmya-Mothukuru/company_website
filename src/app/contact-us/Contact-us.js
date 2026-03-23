@@ -33,7 +33,7 @@ export default function Address() {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
 
           {/* TITLE */}
-          <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-semibold text-[#2F3E4E]">
+          <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-[500] text-[#000000]">
             How to Reach Us
           </h2>
 
