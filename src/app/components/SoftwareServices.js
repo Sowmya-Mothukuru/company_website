@@ -43,7 +43,8 @@ export default function SoftwareServices() {
 
   return (
    // <section className="w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px]">
-   <section className="relative w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px] overflow-hidden">
+   <section className="relative w-full bg-[#F8FBFF] flex justify-center min-h-[1210px] pb-[100px] 
+   overflow-hidden">
 
   {/* 🔷 BLOB 1 (TOP LEFT - EXACT LOOK) */}
 <img

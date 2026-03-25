@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} bg-#F8FBFF`}>
+      <body className={`${spaceGrotesk.className} bg-[#F8FBFF]`}>
        {/* <Navbar />*/}
         {children}
         
