@@ -3,7 +3,7 @@ import React from "react";
 const ContactCard = () => {
   return (
 <div className="w-full relative bg-[#F8FBFF]">
-  <img
+ { /*<img
     src="/blobs/contactcard-b.svg"
     alt="blob"
     className="
@@ -17,7 +17,7 @@ const ContactCard = () => {
       z-0
       pointer-events-none
     "
-  />
+  />*/}
       {/* MAIN OUTER CONTAINER */}
     <div className="max-w-[1257px] mx-auto w-full px-6 flex flex-col items-center
      pt-[80px] gap-[40px] relative z-10">

@@ -7,17 +7,11 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
    weight: ["400", "500", "600", "700"],
 });
-
-export const metadata = {
-  title: "Glitch Brainer",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} bg-[#F8FBFF]`}>
-       {/* <Navbar />*/}
-        {children}
+      <body className={`${spaceGrotesk.className} bg-[#F8FBFF]`} >
+          {children}
         
         <Footer/>
       

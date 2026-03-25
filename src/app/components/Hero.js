@@ -3,8 +3,7 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[860px] xl:h-[920px] overflow-hidden bg-[#F8FBFF]">
-
+   <section className="relative w-full h-[860px] xl:h-[920px] overflow-hidden bg-[#F8FBFF]">
       {/* BACKGROUND */}
      <img
   src="/images/hero-bg.svg"
