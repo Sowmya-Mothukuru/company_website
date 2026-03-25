@@ -2,14 +2,29 @@ import React from "react";
 
 const ContactCard = () => {
   return (
-    <div className="w-full">
+<div className="w-full relative bg-[#F8FBFF]">
+  <img
+    src="/blobs/contactcard-b.svg"
+    alt="blob"
+    className="
+      absolute
+      bottom-[10px]
+      right-0
 
+      w-[260px]
+
+      opacity-30
+      z-0
+      pointer-events-none
+    "
+  />
       {/* MAIN OUTER CONTAINER */}
-    <div className="max-w-[1257px] mx-auto w-full px-6 flex flex-col items-center pt-[80px] gap-[40px]">
+    <div className="max-w-[1257px] mx-auto w-full px-6 flex flex-col items-center
+     pt-[80px] gap-[40px] relative z-10">
 
         {/* HEADER */}
         <header className="text-center mb-16 max-w-[722px] w-full">
-          <h1 className="text-[36px] font-bold text-black mb-4 tracking-tight">
+          <h1 className="text-[36px] font-bold text-black mb-6 tracking-tight">
             Let's Build Together
           </h1>
 
@@ -19,30 +34,38 @@ const ContactCard = () => {
         </header>
 
         {/* FORM CARD */}
-       {/*} <div className="max-w-[1017px] w-full bg-white rounded-[20px] shadow-sm p-10 
-        lg:p-16 flex 
-        flex-col gap-[20px]">*/}
-     <div className="
+    {/* <div className="
 w-full
 bg-white
 rounded-[15px]
 shadow-sm
 px-6 md:px-12 lg:px-[120px]
 py-10 md:py-14 lg:py-[80px]
-">
-  <h2 className="text-[28px] font-bold text-black mb-4">
+">*/}
+<div
+  className="
+    relative
+    w-full
+     z-10 
+    bg-white
+    rounded-[15px]
+    shadow-sm
+    px-6 md:px-12 lg:px-[120px]
+    max-h-[850px]
+    py-8 md:py-10 lg:py-12
+  "
+>
+   {/* 🔵 BLOB (inside card) */}
+  
+ <div className="relative z-10">
+ <h2 className="text-[28px] font-bold text-black mb-4">
    Drop us a line!
 </h2>
-
-<div className="flex flex-col lg:flex-row gap-10 md:gap-14 lg:gap-[68px]">
-
+<div className="flex flex-col lg:flex-row gap-10 md:gap-14 gap-10 md:gap-12 lg:gap-16">
+ 
             {/* LEFT */}
-            {/*<div className="w-full lg:max-w-[446px] flex flex-col gap-[25px]">*/}
             <div className="flex-1 flex flex-col gap-6">
-
-
-
-              <div className="space-y-2">
+           <div className="space-y-2">
                 <label className="block text-sm font-bold text-gray-800">
                   Your Name
                 </label>
@@ -120,12 +143,14 @@ py-10 md:py-14 lg:py-[80px]
               </button>
 
             </div>
-
-          </div>
+     
+             </div>
         </div>
       </div>
+      
+      </div>
+      </div>
 
-    </div>
   );
 };
 export default ContactCard;

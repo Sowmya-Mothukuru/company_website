@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[860px] xl:h-[920px] overflow-hidden">
+    <section className="relative w-full h-[860px] xl:h-[920px] overflow-hidden bg-[#F8FBFF]">
 
       {/* BACKGROUND */}
      <img
@@ -16,7 +16,7 @@ export default function Hero() {
       <Navbar variant="hero" />
 
       {/* HERO CONTAINER */}
-     <div className="relative max-w-[1440px] mx-auto h-full flex items-start pt-[5px] xl:pt-[5px]">
+     <div className="relative max-w-[1440px] mx-auto h-full flex items-start pt-[180px] xl:pt-[180px]">
 
         {/* LEFT CONTENT */}
        <div className="pl-[24px] sm:pl-[32px] md:pl-[42px] text-white max-w-[50%]">

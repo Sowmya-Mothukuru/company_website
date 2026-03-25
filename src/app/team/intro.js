@@ -1,6 +1,23 @@
 export default function TeamHeroSection() {
   return (
-    <section className="w-full flex justify-center py-[8rem] bg-[#F8FBFF] px-6 lg:px-8 xl:px-0">
+    <section className="w-full  flex justify-center py-[8rem] bg-[#F8FBFF] px-6 lg:px-8 xl:px-0">
+     {/* <img
+  src="/blobs/team-intro-blob.svg"
+  alt="blob"
+  className="
+    absolute
+
+    top-[40px]
+
+    right-[calc((100vw-1550px)/2+20px)]
+
+    w-[clamp(80px,18vw,280px)]
+
+    opacity-30
+    pointer-events-none
+    z-0
+  "
+/>*/}
 
       <div className="flex flex-col lg:flex-row items-center gap-[1.625rem] max-w-[75.4375rem] w-full">
 
@@ -32,7 +49,7 @@ export default function TeamHeroSection() {
         </div>
 
       </div>
-
+ 
     </section>
   );
 }

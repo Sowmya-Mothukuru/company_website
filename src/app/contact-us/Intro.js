@@ -43,9 +43,7 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section className="relative w-full bg-[#F8FBFF] flex justify-center py-12 md:py-16 lg:py-3 overflow-hidden">
-
-      {/* 🔷 MAIN CONTENT */}
+    /*<section className="relative w-full bg-[#F8FBFF] flex justify-center py-12 md:py-16 lg:py-3 overflow-hidden">
       <div
         className="
           relative z-10
@@ -57,7 +55,6 @@ export default function ContactUs() {
           xl:h-[640px]
         "
       >
-        {/* ICON BACKGROUND */}
         <Image
           src="/images/contact-intro.svg"
           alt="icons"
@@ -65,8 +62,6 @@ export default function ContactUs() {
           className="object-contain"
           priority
         />
-
-        {/* DOTTED PATH */}
         <Image
           src="/icons/Group 266.svg"
           alt="path"
@@ -88,8 +83,6 @@ export default function ContactUs() {
             pointer-events-none
           "
         />
-
-        {/* TEXT */}
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 md:px-6">
           <p
             className="
@@ -112,6 +105,91 @@ export default function ContactUs() {
         </div>
       </div>
 
+    </section>*/
+    <section className="relative w-full bg-[#F8FBFF] flex items-center justify-center py-10 md:py-12 lg:py-16 overflow-hidden">
+
+      {/* 🔵 TOP RIGHT BLOB */}
+       <img
+  src="/blobs/contact-intro-b.svg"
+  alt="blob"
+  className="
+    absolute 
+    top-[-6%] 
+    right-[-6%]
+
+    w-[clamp(140px,18vw,320px)]
+
+    opacity-40
+    z-0
+    pointer-events-none
+  "
+/>
+
+      {/* 🔵 BOTTOM LEFT BLOB */}
+    <img
+  src="/blobs/contact-intro-b-l.svg"
+  alt="blob"
+  className="
+    absolute 
+    bottom-[-8%] 
+    left-[-7%]
+
+    w-[clamp(140px,18vw,320px)]
+
+    opacity-40
+    z-0
+    pointer-events-none
+  "
+/>
+
+      {/* 🔷 MAIN CARD */}
+      <div
+        className="
+          relative z-10
+          w-full 
+          max-w-[900px] 
+          md:max-w-[1000px] 
+          lg:max-w-[1100px] 
+          xl:max-w-[1200px] 
+          2xl:max-w-[1300px]
+          aspect-[1016/617]
+        "
+      >
+        {/* ICON BACKGROUND */}
+      <Image
+  src="/images/contact-intro.svg"
+  alt="icons"
+  fill
+  className="
+    object-cover 
+    opacity-80
+  "
+  priority
+/>
+        {/* DOTTED PATH */}
+       <Image
+  src="/icons/Group 266.svg"
+  alt="path"
+  fill
+  className="
+    object-contain 
+    scale-[0.9] md:scale-100 lg:scale-105
+    pointer-events-none
+  "
+/>
+        {/* TEXT */}
+        <div className="absolute inset-0 flex items-center justify-center text-center px-4 sm:px-6 md:px-10">
+          <p
+            className="
+              font-Playfair font-semibold text-[#334155]
+              leading-[110%]
+              text-[clamp(22px,3vw,48px)]
+            "
+          >
+            Every great collaboration starts with a conversation.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

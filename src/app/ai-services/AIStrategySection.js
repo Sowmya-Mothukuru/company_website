@@ -8,7 +8,7 @@ export default function AIStrategySection() {
       lg:items-start gap-[60px] lg:gap-[109px] px-6">
 
         {/* LEFT IMAGE */}
-        <div className="flex-shrink-0  bg-[#D4D4D4]">
+        <div className="flex-shrink-0 bg-[#F8FBFF]">
 <Image
             src="/images/artificial-intelligence/amico.svg"
             alt="AI Strategy Illustration"
