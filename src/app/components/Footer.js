@@ -102,119 +102,150 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#F8FBFF]">
 
-      {/* FULL WIDTH BACKGROUND */}
+      {/* BACKGROUND */}
       <div
-        className="w-full bg-cover bg-top  min-h-[500px] md:min-h-[600px]"
+        className="w-full bg-cover bg-top z-[60]"
         style={{
           backgroundImage: "url('/images/footer.png')",
         }}
       >
-
-        {/* CONTENT CONTAINER */}
+        {/* CONTENT */}
         <div className="
-          max-w-[1298px] mx-auto 
-          px-4 sm:px-6 lg:px-[72px] 
-          pt-[100px] md:pt-[120px] xl:pt-[140px] 
-          pb-[60px] md:pb-[70px] xl:pb-[80px]
-        ">
+  max-w-[1298px] mx-auto
+  px-6 lg:px-[72px]
+  pt-[160px] md:pt-[190px] lg:pt-[220px]
+  pb-[40px]
+  min-h-[680px]
 
+  flex flex-col
+">
+
+          {/* MAIN FLEX */}
           <div className="
-            flex flex-col lg:flex-row 
-            justify-between 
-            gap-[40px] md:gap-[50px] lg:gap-[60px]
+            flex flex-col lg:flex-row
+            justify-start
+            gap-[60px] md:gap-[80px] lg:gap-[120px]
           ">
 
-            {/* LEFT */}
+            {/* LEFT BLOCK */}
             <div className="
-              w-full lg:max-w-[441px] 
-              flex flex-col gap-[20px] md:gap-[24px]
+              w-full lg:max-w-[441px]
+              flex flex-col gap-[20px]
             ">
 
-              <h2 className="text-white text-[18px] md:text-[20px] font-semibold">
+              <h2 className="text-white text-[20px] font-semibold">
                 Glitch Brainer
               </h2>
 
-              <p className="text-[#B0B8C1] text-[13px] md:text-[14px] leading-[22px]">
+              <p className="
+                text-[#B0B8C1]
+                text-[14px]
+                leading-[22px]
+                max-w-[400px]
+              ">
                 We build scalable AI, data, and software solutions that help
                 businesses automate, optimize, and grow.
               </p>
 
-              <div className="flex flex-col gap-[8px] text-[#E5E7EB] text-[13px] md:text-[14px]">
+              {/* CONTACT */}
+              <div className="flex flex-col gap-[12px] text-[#E5E7EB] text-[14px]">
+
                 <div className="flex items-center gap-2">
-                  <img src="/icons/tdesign_location.png" className="w-[18px] md:w-[20px]" />
+                  <img src="/icons/tdesign_location.png" className="w-[18px]" />
                   Bengaluru
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <img src="/icons/proicons_call.png" className="w-[18px] md:w-[20px]" />
+                  <img src="/icons/proicons_call.png" className="w-[18px]" />
                   +91 98765 43210
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <img src="/icons/material-symbols-light_mail-outline.png" className="w-[18px] md:w-[20px]" />
+                  <img src="/icons/material-symbols-light_mail-outline.png" className="w-[18px]" />
                   hello@Glitchbrainer.com
                 </div>
               </div>
 
-              <div className="flex gap-3 md:gap-4 pt-2 flex-wrap">
-                <img src="/icons/Group 90.png" className="w-[32px] md:w-[36px]" />
-                <img src="/icons/Group 91.png" className="w-[32px] md:w-[36px]" />
-                <img src="/icons/Group 92.png" className="w-[32px] md:w-[36px]" />
-                <img src="/icons/Group 93.png" className="w-[32px] md:w-[36px]" />
+              {/* SOCIAL */}
+              <div className="flex gap-3 pt-2">
+                <img src="/icons/Group 90.png" className="w-[32px]" />
+                <img src="/icons/Group 91.png" className="w-[32px]" />
+                <img src="/icons/Group 92.png" className="w-[32px]" />
+                <img src="/icons/Group 93.png" className="w-[32px]" />
               </div>
 
-              <button
+              {/* BACK TO TOP */}
+             {/* <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="mt-4 w-fit px-5 h-[40px] md:h-[44px] bg-white text-[#2F3E4E] text-[13px] md:text-[14px] rounded-[6px] flex items-center gap-2"
+                className="
+                  mt-4 w-fit
+                  px-5 h-[42px]
+                  bg-white text-[#2F3E4E]
+                  text-[14px]
+                  rounded-[6px]
+                  flex items-center gap-2
+                "
               >
-                <img src="/icons/iconoir_fast-arrow-up.png" className="w-[18px] md:w-[20px]" />
+                <img src="/icons/iconoir_fast-arrow-up.png" className="w-[18px]" />
                 Back to Top
-              </button>
+              </button>*/}
 
             </div>
 
-            {/* RIGHT */}
+            {/* RIGHT BLOCK */}
             <div className="
-              flex flex-col sm:flex-row 
-              gap-[40px] md:gap-[60px] lg:gap-[80px]
+              w-full lg:max-w-[472px]
+              flex flex-col sm:flex-row
+              gap-[60px] lg:gap-[71px]
             ">
 
-              <div className="flex flex-col gap-[16px] md:gap-[20px]">
-                <h3 className="text-white text-[18px] md:text-[20px] font-semibold">
+              {/* SITE MAP */}
+              <div className="flex flex-col gap-[20px] w-[198px]">
+
+                <h3 className="text-white text-[20px] font-semibold">
                   Site Map
                 </h3>
 
-                <ul className="flex flex-col gap-[12px] md:gap-[14px] text-[#E5E7EB] text-[14px] md:text-[16px]">
+                <ul className=" flex flex-col gap-[18px] text-[#E5E7EB] text-[16px]">
                   <li>AI Services</li>
                   <li>Software Services</li>
                   <li>Industries We Serve</li>
                   <li>Team</li>
                   <li>Contact Us</li>
                 </ul>
+
               </div>
 
-              <div className="flex flex-col gap-[16px] md:gap-[20px]">
-                <h3 className="text-white text-[18px] md:text-[20px] font-semibold">
+              {/* LEGAL */}
+              <div className="flex flex-col gap-[18px] w-[203px]">
+
+                <h3 className="text-white text-[20px] font-semibold">
                   Legal
                 </h3>
 
-                <ul className="flex flex-col gap-[12px] md:gap-[14px] text-[#E5E7EB] text-[14px] md:text-[16px]">
+                <ul className=" flex flex-col gap-[16px] text-[#E5E7EB] text-[16px]">
                   <li>Privacy Policy</li>
                   <li>Terms & Conditions</li>
                 </ul>
+
               </div>
 
             </div>
 
           </div>
 
-        </div>
+          {/* COPYRIGHT */}
+          {/* COPYRIGHT */}
+<div className="
+  text-center text-gray-400
+  text-[13px]
+  mt-auto pt-[40px]
+  font-Public 
+">
+  © Glitch Brainer 2025. All Rights Reserved
+</div>
 
-        {/* BOTTOM BAR */}
-        <div className="w-full text-white text-center py-3 text-[12px] md:text-[13px] text-gray-400">
-          © Glitch Brainer 2025. All Rights Reserved
         </div>
-
       </div>
 
     </footer>
