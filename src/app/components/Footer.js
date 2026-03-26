@@ -100,7 +100,7 @@ export default function Footer() {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#F8FBFF]">
+    <footer className="w-full bg-[#F8FBFF] -mt-[3px]">
 
       {/* FULL WIDTH BACKGROUND */}
       <div
@@ -114,7 +114,7 @@ export default function Footer() {
         <div className="
           max-w-[1298px] mx-auto 
           px-4 sm:px-6 lg:px-[72px] 
-          pt-[100px] md:pt-[120px] xl:pt-[140px] 
+          pt-[200px] md:pt-[240px] xl:pt-[260px] 
           pb-[60px] md:pb-[70px] xl:pb-[80px]
         ">
 
@@ -134,7 +134,7 @@ export default function Footer() {
                 Glitch Brainer
               </h2>
 
-              <p className="text-[#B0B8C1] text-[13px] md:text-[14px] leading-[22px]">
+              <p className="hidden lg:block text-[#B0B8C1] text-[14px] leading-[22px]">
                 We build scalable AI, data, and software solutions that help
                 businesses automate, optimize, and grow.
               </p>
@@ -163,13 +163,13 @@ export default function Footer() {
                 <img src="/icons/Group 93.png" className="w-[32px] md:w-[36px]" />
               </div>
 
-              <button
+              {/* <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="mt-4 w-fit px-5 h-[40px] md:h-[44px] bg-white text-[#2F3E4E] text-[13px] md:text-[14px] rounded-[6px] flex items-center gap-2"
               >
                 <img src="/icons/iconoir_fast-arrow-up.png" className="w-[18px] md:w-[20px]" />
                 Back to Top
-              </button>
+              </button> */}
 
             </div>
 

@@ -9,16 +9,18 @@ import Navbar from "../components/Navbar";
 
 export default function AIServicesPage() {
   return (
-    <main>
-      <Navbar/>
-<div className="h-[180px] xl:h-[213px]" />
-      <AiServices />
-      <AIStrategySection/>
-      <GenerativeAi/>
-      <AdvancedAnalytics/>
-      <IntelligenceAuto/>
-      <Aimodel/>
-      <AiSecurity/>
-    </main>
+    <>
+      <Navbar />
+
+      <main className="pt-[120px] xl:pt-[213px]">
+        <AiServices />
+        <AIStrategySection/>
+        <GenerativeAi/>
+        <AdvancedAnalytics/>
+        <IntelligenceAuto/>
+        <Aimodel/>
+        <AiSecurity/>
+      </main>
+    </>
   );
 }
