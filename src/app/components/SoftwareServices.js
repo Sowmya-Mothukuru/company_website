@@ -82,23 +82,35 @@ export default function SoftwareServices() {
     pointer-events-none
   "
 />
-  <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[100px] relative z-10">
+  <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[60px] sm:pt-[80px] md:pt-[100px] relative z-10">
         <div className="w-full max-w-[963px] flex flex-col items-center gap-[28px] px-4">
-       <h2 className="font-['Space_Grotesk'] font-bold text-[36px] text-black w-full text-center">
+       <h2 className="font-['Space_Grotesk'] font-bold text-[24px] sm:text-[28px] md:text-[36px] text-black w-full text-center">
             Software Services
           </h2>
-          <p className="font-['Space_Grotesk'] font-normal text-[20px] leading-[32px] text-[#5D5D5D] w-full text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <p className="font-['Space_Grotesk'] font-normal 
+  text-[14px] sm:text-[16px] md:text-[20px]
+  leading-[22px] sm:leading-[26px] md:leading-[32px]
+  text-[#5D5D5D] w-full text-center">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
         </div>
         <div className="mt-[82px] w-full">
-  <div className="grid grid-cols-[389px_1fr_1fr] grid-rows-2 gap-[18px] w-full">
+  <div className="
+  grid
+  grid-cols-1
+  justify-items-center
+
+  lg:grid-cols-[389px_1fr_1fr]
+  lg:grid-rows-2
+
+  gap-[16px] md:gap-[18px]
+  w-full
+">
 
     {/* LEFT BIG CARD */}
-    <div className="row-span-2">
-      <FeaturedCard />
-    </div>
-
+   <div className="hidden lg:block row-span-2">
+  <FeaturedCard />
+</div>
     {/* RIGHT 4 CARDS */}
     {smallCards.map((service, index) => (
       <Card key={index} service={service} />
@@ -106,15 +118,15 @@ export default function SoftwareServices() {
 
   </div>
 </div>
-       <div className="mt-[48px] w-full flex justify-end">
-          <Link
-  href="/services"
-  className="w-[254px] h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center gap-[10px] font-['Space_Grotesk'] font-normal text-[20px] leading-none transition-opacity hover:opacity-90"
->
-  <span>View More</span>
-  <span className="text-[20px]">→</span>
-</Link>
-        </div>
+     <div className="mt-[32px] sm:mt-[40px] md:mt-[48px] w-full flex justify-center lg:justify-end">
+  <Link
+    href="/services"
+    className="w-[220px] sm:w-[240px] md:w-[254px] h-[44px] md:h-[48px] bg-[#334155] text-white rounded-[16px] flex items-center justify-center gap-[10px] font-['Space_Grotesk'] text-[16px] md:text-[20px] transition-opacity hover:opacity-90"
+  >
+    <span>View More</span>
+    <span>→</span>
+  </Link>
+</div>
       </div>
     </section>
   );
@@ -172,12 +184,18 @@ function Card({ service }) {
       className={`
         group
         w-full
-        h-full 
+max-w-[420px]
+mx-auto
+
+h-auto
+min-h-[260px] sm:min-h-[300px] md:h-full
+
+p-[20px] sm:p-[24px] md:p-[32px] 
         rounded-[24px]
         flex flex-col
         items-center
         justify-between
-        p-[32px]
+      
         transition-all duration-300
         ${isDark ? "bg-[#334155]" : "bg-white"}
         hover:bg-[#2E3B4E]
@@ -188,14 +206,14 @@ function Card({ service }) {
         <img
           src={service.image}
           alt={service.title}
-          className="max-h-[180px] object-contain"
+         className="max-h-[140px] sm:max-h-[160px] md:max-h-[180px] object-contain"
         />
       </div>
       <div className="text-center flex flex-col items-center">
         <h3
           className={`
             font-['Space_Grotesk']
-            text-[20px]
+            text-[16px] sm:text-[18px] md:text-[20px]
             leading-[28px]
             font-semibold
             transition-colors
@@ -209,10 +227,10 @@ function Card({ service }) {
         <p
           className="
             mt-[12px]
-            text-[14px]
+           text-[12px] sm:text-[13px] md:text-[14px]
+leading-[18px] sm:leading-[20px] md:leading-[22px]
             text-[#6B7280]
             max-w-[280px]
-            leading-[22px]
             transition-colors
            
             hover:text-white
@@ -226,7 +244,7 @@ function Card({ service }) {
 
   // Only wrap with Link if link exists
   return service.link ? (
-    <Link href={service.link} className="block">
+    <Link href={service.link} className="block w-full flex justify-center">
       {cardContent}
     </Link>
   ) : (

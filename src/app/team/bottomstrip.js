@@ -5,12 +5,8 @@ export function TeamBottomStrip() {
         w-full 
         bg-[#F8FBFF] 
         flex justify-center 
-        
-        -mt-[40px] 
-        md:-mt-[50px] 
-        lg:-mt-[70px] 
-        xl:-mt-[90px] 
-        2xl:-mt-[110px]
+    -mt-6 sm:-mt-8 md:-mt-10 lg:-mt-[70px] xl:-mt-[90px] 2xl:-mt-[110px]
+        /* ✅ softer overlap on mobile */
       "
     >
       <div
@@ -35,6 +31,7 @@ export function TeamBottomStrip() {
             md:max-h-[130px]
             lg:max-h-[139px]
             xl:max-h-[150px]
+             mx-auto   /* ✅ center nicely on small screens */
           "
         />
       </div>

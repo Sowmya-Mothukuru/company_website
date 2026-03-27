@@ -5,37 +5,56 @@ export default function CareerHero() {
     <section className="w-full flex justify-center py-16 lg:py-20 xl:py-24 bg-[#F8FBFF]">
 
       {/* Card */}
-  
-  <div
-  className="
-    w-full 
-    max-w-[1298px] 
+      <div
+        className="
+          w-full 
+          max-w-[1298px] 
 
-    mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-10 2xl:mx-auto
+          mx-0 lg:mx-10 xl:mx-10 2xl:mx-auto
 
-    h-[380px]
-    md:h-[420px]
-    lg:h-[450px]
-    xl:h-[481px]
+          h-auto lg:h-[450px] xl:h-[481px]   /* ✅ mobile fix */
 
-    bg-[#F4F6F8] 
-    rounded-[8px] 
+          bg-[#F4F6F8] 
+          rounded-[8px] 
 
-    flex items-center 
-    relative
+          flex flex-col lg:flex-row   /* ✅ mobile layout */
+          items-center 
+          relative
 
-    px-4 sm:px-6 md:px-8 lg:px-6 xl:px-0
-  "
->
+          py-8 sm:py-10 md:py-12 lg:py-0
+
+          px-4 sm:px-6 md:px-8 lg:px-6 xl:px-0
+        "
+      >
+
+        {/* ✅ Mobile Top Subtitle */}
+        <div
+          className="
+            flex lg:hidden
+
+            font-spaceGrotesk 
+            items-center justify-center
+            gap-2
+
+            text-[13px] sm:text-[14px] 
+            font-medium text-[#2D3E50] 
+
+            mb-4
+          "
+        >
+          <span className="w-[5px] h-[5px] rounded-full bg-[#2D3E50]" />
+          <span>Build the future with us</span>
+        </div>
 
         {/* Left Illustration */}
         <div
           className="
-            pl-[16px] sm:pl-[20px] md:pl-[24px] 
-            lg:pl-[28px] xl:pl-[32px] 
+            flex justify-center
 
-            pt-[20px] sm:pt-[22px] md:pt-[24px] 
-            lg:pt-[28px] xl:pt-[34px] 
+            mb-6 sm:mb-8 lg:mb-0
+
+            pl-0 lg:pl-[28px] xl:pl-[32px]
+            pt-0 lg:pt-[28px] xl:pt-[34px]
 
             flex-shrink-0
           "
@@ -47,7 +66,7 @@ export default function CareerHero() {
             height={414}
             className="
               object-contain 
-              w-[260px] sm:w-[300px] md:w-[340px] 
+              w-[220px] sm:w-[260px] md:w-[300px] 
               lg:w-[420px] xl:w-[497px] 
               h-auto
             "
@@ -57,11 +76,13 @@ export default function CareerHero() {
         {/* Right Content */}
         <div className="relative flex flex-col items-center text-center flex-1 px-2 sm:px-4">
 
-          {/* Subtitle */}
+          {/* ✅ Desktop Subtitle */}
           <div
             className="
+              hidden lg:flex
+
               font-spaceGrotesk 
-              flex items-center 
+              items-center 
               gap-3 sm:gap-4 lg:gap-5 xl:gap-6 
 
               text-[13px] sm:text-[14px] 
@@ -76,42 +97,50 @@ export default function CareerHero() {
           </div>
 
           {/* Heading */}
-      <h1
-  className="
-    font-spaceGrotesk 
-    text-[24px] sm:text-[28px] md:text-[32px] 
-    lg:text-[36px] xl:text-[40px] 
+          <h1
+            className="
+              font-spaceGrotesk 
+              font-medium
+              text-[24px] sm:text-[28px] md:text-[32px] 
+              lg:text-[36px] xl:text-[40px] 
 
-    leading-[30px] sm:leading-[34px] md:leading-[36px] 
-    lg:leading-[40px] xl:leading-[44px] 
+              leading-[30px] sm:leading-[34px] md:leading-[36px] 
+              lg:leading-[40px] xl:leading-[44px] 
 
-    text-[#2D3E50] 
+              text-[#2D3E50] 
 
-    max-w-[90%] sm:max-w-[500px] md:max-w-[550px] 
-    lg:max-w-[600px] xl:max-w-[650px] 
+              max-w-[90%] sm:max-w-[500px] md:max-w-[550px] 
+              lg:max-w-[600px] xl:max-w-[650px] 
 
-    text-center
-    xl:whitespace-nowrap
-  "
->
+              text-center
+            "
+          >
             We’re looking for passionate people
             <br />
             to join our team.
           </h1>
 
           {/* Arrow */}
+      
+          {/* Arrow */}
       <div
   className="
     absolute 
 
-    left-[0px] sm:left-[10px] md:left-[20px] 
-    lg:left-[20px] xl:left-[80px] 
+    left-1/2 
+    -translate-x-[150px]
+    bottom-[40px]
 
-    top-[80px] sm:top-[90px] md:top-[90px] 
-    lg:top-[110px] xl:top-[100px]
+    sm:-translate-x-[140px] sm:bottom-[75px]
+
+    md:-translate-x-[180px] md:bottom-[60px]   /* ✅ TABLET FIX */
+
+    lg:hidden xl:block
+
+    xl:left-[280px] xl:top-[120px]   /* ✅ FIX for 1440 */
+2xl:left-[140px] 2xl:top-[130px] /* ✅ bigger screens */         /* ✅ 1440+ FIX */
 
     pointer-events-none
-    hidden xl:block
   "
 >
   <Image
@@ -120,10 +149,10 @@ export default function CareerHero() {
     width={110}
     height={140}
     className="
-      rotate-[20deg] 
+      rotate-[30deg]
 
-      w-[50px] sm:w-[60px] md:w-[70px] 
-      lg:w-[85px] xl:w-[110px] 
+      w-[60px] sm:w-[55px] md:w-[65px]   /* ✅ tablet size tweak */
+      lg:w-[85px] xl:w-[110px]
 
       h-auto
     "

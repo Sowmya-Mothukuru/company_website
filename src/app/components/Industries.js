@@ -1,4 +1,5 @@
 "use client";
+
 export default function IndustriesSection() {
 
   const row1 = [
@@ -20,40 +21,54 @@ export default function IndustriesSection() {
     { text: "Media, Marketing & Content", icon: "/icons/fluent-mdl2_media.svg" },
   ];
 
-  const allItems = [...row1, ...row2, ...row3];
-
   const Capsule = ({ text, icon }) => {
     return (
       <div
         className="
-          min-w-[270px]
-          h-[68px]
-          rounded-[50px]
+          min-w-[200px]
+          sm:min-w-[230px]
+          md:min-w-[270px]
+
+          h-[48px]
+          sm:h-[56px]
+          md:h-[68px]
+
+          rounded-full
           bg-[#2F3E52]
-          flex
-          items-center
-          px-[20px]
-          gap-[10px]
+
+          flex items-center
+          px-[12px] sm:px-[16px] md:px-[20px]
+          gap-[8px] sm:gap-[10px]
+
           shrink-0
-            flex-shrink-0
         "
       >
         {/* ICON */}
         <img
           src={icon}
           alt={text}
-          className="w-[26px] h-[26px] shrink-0"
+          className="
+            w-[18px] h-[18px]
+            sm:w-[22px] sm:h-[22px]
+            md:w-[26px] md:h-[26px]
+            shrink-0
+          "
         />
 
         {/* TEXT */}
         <span
           className="
             text-white
-            text-[20px]
-            md:text-[24px]
+            text-[13px]
+            sm:text-[15px]
+            md:text-[20px]
+
             font-medium
             leading-[100%]
-            tracking-[-0.5px]
+
+            tracking-[-0.2px]
+            md:tracking-[-0.5px]
+
             whitespace-nowrap
           "
           style={{ fontFamily: "Space Grotesk" }}
@@ -65,17 +80,17 @@ export default function IndustriesSection() {
   };
 
   return (
-    <section className="w-full">
+    <section className="w-full bg-white">
 
-      {/* HEADER Data*/}
-      <div className="mt-[55px] flex justify-center px-4">
-        <div className="max-w-[963px] flex flex-col items-center gap-[28px] text-center">
+      {/* HEADER */}
+      <div className="mt-[40px] sm:mt-[50px] md:mt-[55px] flex justify-center px-4">
+        <div className="max-w-[963px] flex flex-col items-center gap-[20px] sm:gap-[24px] md:gap-[28px] text-center">
 
-          <h2 className="text-[28px] md:text-[36px] font-semibold leading-[120%]">
+          <h2 className="text-[22px] sm:text-[26px] md:text-[36px] font-semibold leading-[120%] mt-[10px]">
             Industries we serve
           </h2>
 
-          <p className="text-[16px] md:text-[20px] text-gray-500 leading-[150%] max-w-[750px]">
+          <p className="text-[14px] sm:text-[16px] md:text-[20px] text-gray-500 leading-[150%] max-w-[750px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -83,32 +98,25 @@ export default function IndustriesSection() {
         </div>
       </div>
 
-      {/* CAPSULES */}
-      <div className="mt-[60px] md:mt-[71px] mb-[60px] md:mb-[84px] w-full">
+      {/* CAPSULE ANIMATION (ALL DEVICES) */}
+      <div className="mt-[40px] sm:mt-[50px] md:mt-[71px] mb-[50px] sm:mb-[60px] md:mb-[84px] w-full">
 
-        {/* MOBILE */}
-        <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-[16px] justify-items-center">
-          {allItems.map((item, index) => (
-            <Capsule key={index} text={item.text} icon={item.icon} />
-          ))}
-        </div>
+        <div
+          className="
+            flex
+            w-full
+            overflow-hidden
+            flex-col
+            justify-center
+            gap-[16px]
+            sm:gap-[20px]
+            md:gap-[30px]
+          "
+        >
 
-        {/* DESKTOP */}
-       <div
-  className="
-    hidden
-    md:flex
-    w-full
-    h-[310px]
-    overflow-hidden
-    flex-col
-    justify-center
-    gap-[30px]
-  "
->
           {/* ROW 1 */}
           <div className="overflow-hidden">
-            <div className="flex gap-[20px] w-max animate-scrollLeft">
+            <div className="flex gap-[12px] sm:gap-[16px] md:gap-[20px] w-max animate-scrollLeft">
               {[...row1, ...row1, ...row1].map((item, index) => (
                 <Capsule key={index} text={item.text} icon={item.icon} />
               ))}
@@ -117,7 +125,7 @@ export default function IndustriesSection() {
 
           {/* ROW 2 */}
           <div className="overflow-hidden">
-            <div className="flex gap-[20px] w-max animate-scrollRight">
+            <div className="flex gap-[12px] sm:gap-[16px] md:gap-[20px] w-max animate-scrollRight">
               {[...row2, ...row2, ...row2].map((item, index) => (
                 <Capsule key={index} text={item.text} icon={item.icon} />
               ))}
@@ -126,7 +134,7 @@ export default function IndustriesSection() {
 
           {/* ROW 3 */}
           <div className="overflow-hidden">
-            <div className="flex gap-[20px] w-max animate-scrollLeft">
+            <div className="flex gap-[12px] sm:gap-[16px] md:gap-[20px] w-max animate-scrollLeft">
               {[...row3, ...row3, ...row3].map((item, index) => (
                 <Capsule key={index} text={item.text} icon={item.icon} />
               ))}
