@@ -106,10 +106,11 @@ export default function ContactUs() {
       </div>
 
     </section>*/
-    <section className="relative w-full bg-[#F8FBFF] flex items-center justify-center py-10 md:py-12 lg:py-16 overflow-hidden">
+    <section className="relative w-full bg-[#F8FBFF] flex items-center justify-center py-10 
+    md:py-12 lg:py-5 overflow-hidden">
 
       {/* 🔵 TOP RIGHT BLOB */}
-       <img
+     { /* <img
   src="/blobs/contact-intro-b.svg"
   alt="blob"
   className="
@@ -123,10 +124,10 @@ export default function ContactUs() {
     z-0
     pointer-events-none
   "
-/>
+/>*/}
 
       {/* 🔵 BOTTOM LEFT BLOB */}
-    <img
+   {/*} <img
   src="/blobs/contact-intro-b-l.svg"
   alt="blob"
   className="
@@ -140,7 +141,7 @@ export default function ContactUs() {
     z-0
     pointer-events-none
   "
-/>
+/>*/}
 
       {/* 🔷 MAIN CARD */}
       <div
