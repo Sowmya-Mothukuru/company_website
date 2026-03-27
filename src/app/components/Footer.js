@@ -25,7 +25,7 @@ export default function Footer() {
                 Glitch Brainer
               </h2>
 
-              {/* ✅ Hidden on mobile, visible on md+ */}
+              {/* Hidden on mobile, visible on md+ */}
               <p className="hidden md:block text-[#B0B8C1] text-[14px] leading-[22px]">
                 We build scalable AI, data, and software solutions that help
                 businesses automate, optimize, and grow.
