@@ -17,7 +17,7 @@
     pointer-events-none
     z-0
   "
-/>*/}
+/>
 
       <div className="flex flex-col lg:flex-row items-center gap-[1.625rem] max-w-[75.4375rem] w-full">
         <div className="w-full max-w-[26.37rem] flex justify-center">
