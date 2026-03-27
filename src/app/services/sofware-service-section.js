@@ -1,33 +1,40 @@
+import Link from "next/link";
 export default function SoftwareServices() {
   const services = [
     {
       title: "Software Development",
       description: "Custom software crafted for performance and scale",
+      link:"#software-development",
       image: "/rafiki.svg",
     },
     {
       title: "Product Engineering & MVPs",
       description: "Convert data into actionable insights",
+      link:"#product-eng",
       image: "/bro.svg",
     },
     {
       title: "Cloud Engineering, DevOps",
       description: "Optimize your infrastructure with our cloud engineering and DevOps solutions.",
+      link:"#cloud-eng",
       image: "/rafiki2.svg",
     },
     {
       title: "UI/UX Design",
       description: "Create stunning user experiences with our professional UI/UX design services.",
+      link:"#ui-ux",
       image: "/rafiki4.png",
     },
     {
       title: "Data Engineering, BI & Quality Assurance",
       description: "Convert data into actionable insights",
+      link:"#data-eng",
       image: "/data-analysis/amico.svg",
     },
     {
       title: "Digital Transformation, IT Consulting & Support",
       description: "Convert data into actionable insights",
+      link:"#digital-trans",
       image: "/computer-login/rafiki.svg",
     },
   ];
@@ -75,6 +82,7 @@ export default function SoftwareServices() {
 
 function Card({ service }) {
   return (
+    <Link href={service.link || "#"} className="w-full">
     <div
       className="
       group
@@ -126,5 +134,6 @@ function Card({ service }) {
       </p>
 
     </div>
+    </Link>
   );
 }

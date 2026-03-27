@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AiSecurity() {
   return (
-    <section className="w-full flex justify-center py-[70px] md:py-[70px] lg:py-[70px] bg-[#F8FBFF] -mt-[2px]">
+    <section id="ai-security" className="w-full flex justify-center py-[70px] md:py-[70px] lg:py-[70px] bg-[#F8FBFF] -mt-[2px]">
       
       <div className="w-full max-w-[1269px] px-6">
 
