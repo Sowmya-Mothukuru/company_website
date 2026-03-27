@@ -8,6 +8,7 @@ export default function AiServices() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       icon: "/star_icon.svg",
+      link:"#ai-strategy",
       width: "lg:flex-[4]",
     },
     {
@@ -15,6 +16,7 @@ export default function AiServices() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       icon: "/charm_robot.svg",
+      link:"#generative-ai",
       width: "lg:flex-[6]",
     },
     {
@@ -22,6 +24,7 @@ export default function AiServices() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       icon: "/carbon_analytics.svg",
+      link:"#advance-analytics",
       width: "lg:flex-[6]",
     },
     {
@@ -29,6 +32,7 @@ export default function AiServices() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       icon: "/star_icon.svg",
+      link:"#automation",
       width: "lg:flex-[4]",
     },
     {
@@ -36,6 +40,7 @@ export default function AiServices() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       icon: "/star_icon.svg",
+      link:"#ai-model",
       width: "lg:flex-[4]",
     },
     {
@@ -43,6 +48,7 @@ export default function AiServices() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       icon: "/charm_robot.svg",
+      link:"#ai-security",
       width: "lg:flex-[6]",
     },
   ];
@@ -99,8 +105,7 @@ export default function AiServices() {
 function Card({ service }) {
 
   return (
-
-    <Link href="/ai-services" className={`w-full ${service.width}`}>
+<Link href={service.link || "#"} className={`w-full ${service.width}`}>
 
       <div
         className="
@@ -111,8 +116,8 @@ function Card({ service }) {
         p-6 md:p-10
 
         flex flex-col
-        items-center md:items-start
-        text-center md:text-left
+        items-center md:items-center
+        text-center md:text-center
 
         gap-5 md:gap-6
 

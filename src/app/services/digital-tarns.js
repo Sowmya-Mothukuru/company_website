@@ -2,7 +2,7 @@ import React from "react";
 
 const DigitalTrans = () => {
   return (
-    <section
+    <section id="digital-trans"
       className="w-full bg-[#F8FBFF] flex justify-center 
       py-[80px] md:py-[120px] lg:py-[120px] px-[1.5rem] -mt-[2px]"
     >
