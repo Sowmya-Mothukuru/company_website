@@ -38,7 +38,7 @@ export default function AiServices() {
   ];
 
   return (
-    <section className="relative w-full bg-[#F8FBFF] flex justify-center py-[5rem] overflow-hidden">
+    <section className="relative w-full bg-[#F8FBFF] flex justify-center py-[5rem] overflow-hidden mt-[-235px]">
 
       {/* 🔷 RESPONSIVE BLOB */}
       <img

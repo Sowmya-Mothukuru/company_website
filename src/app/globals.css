@@ -73,3 +73,13 @@ body {
 .animate-scrollTestimonials {
   animation: scrollLeft 35s linear infinite;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}

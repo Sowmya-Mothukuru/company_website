@@ -1,6 +1,6 @@
 export default function TeamHeroSection() {
   return (
-    <section className="w-full  flex justify-center py-[8rem] bg-[#F8FBFF] px-6 lg:px-8 xl:px-0">
+    <section className="w-full  flex justify-center py-[8rem] bg-[#F8FBFF] py-[40px] -mt-[120px] pt-[140px]">
      {/* <img
   src="/blobs/team-intro-blob.svg"
   alt="blob"
