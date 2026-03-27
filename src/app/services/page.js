@@ -11,7 +11,7 @@ export default function ServicesPage() {
   return (
     <main>
       <Navbar/>
-      <div className="h-[180px] xl:h-[213px]" />
+      <div className="h-[120px] md:h-[140px] xl:h-[180px] bg-[#F8FBFF]" />
       <SoftwareServices/>
       <CustomSoftware/>
       <ProductEng/>

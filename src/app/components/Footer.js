@@ -1,253 +1,71 @@
-/*"use client";
-export default function Footer() {
-  return (
-    <footer className="w-full  bg-[#F8FBFF] ">
-      <div
-        className="w-full bg-cover bg-top"
-        style={{
-          backgroundImage: "url('/images/footer.png')",
-        }}
-      >
-        <div className="max-w-[1298px] mx-auto px-6 lg:px-[72px] pt-[140px] pb-[80px]">
-
-          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-[60px]">
-            <div className="max-w-[441px] flex flex-col gap-[24px]">
-
-              <h2 className="text-white text-[20px] font-semibold">
-                Glitch Brainer
-              </h2>
-
-              <p className="text-[#B0B8C1] text-[14px] leading-[22px]">
-                We build scalable AI, data, and software solutions that help
-                businesses automate, optimize, and grow.
-              </p>
-
-              <div className="flex flex-col gap-[8px] text-[#E5E7EB] text-[14px]">
-                <div className="flex items-center gap-2">
-                  <img src="/icons/tdesign_location.png" className="w-[20px]" />
-                  Bengaluru
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <img src="/icons/proicons_call.png" className="w-[20px]" />
-                  +91 98765 43210
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <img src="/icons/material-symbols-light_mail-outline.png" className="w-[20px]" />
-                  hello@Glitchbrainer.com
-                </div>
-              </div>
-
-              <div className="flex gap-4 pt-2">
-                <img src="/icons/Group 90.png" className="w-[36px]" />
-                <img src="/icons/Group 91.png" className="w-[36px]" />
-                <img src="/icons/Group 92.png" className="w-[36px]" />
-                <img src="/icons/Group 93.png" className="w-[36px]" />
-              </div>
-
-              <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="mt-4 w-fit px-5 h-[44px] bg-white text-[#2F3E4E] text-[14px] rounded-[6px] flex items-center gap-2"
-              >
-                <img src="/icons/iconoir_fast-arrow-up.png" className="w-[20px]" />
-                Back to Top
-              </button>
-
-            </div>
-            <div className="flex flex-col sm:flex-row gap-[80px]">
-
-              <div className="flex flex-col gap-[20px]">
-                <h3 className="text-white text-[20px] font-semibold">
-                  Site Map
-                </h3>
-
-                <ul className="flex flex-col gap-[14px] text-[#E5E7EB] text-[16px]">
-                  <li>AI Services</li>
-                  <li>Software Services</li>
-                  <li>Industries We Serve</li>
-                  <li>Team</li>
-                  <li>Contact Us</li>
-                </ul>
-              </div>
-
-              <div className="flex flex-col gap-[20px]">
-                <h3 className="text-white text-[20px] font-semibold">
-                  Legal
-                </h3>
-
-                <ul className="flex flex-col gap-[14px] text-[#E5E7EB] text-[16px]">
-                  <li>Privacy Policy</li>
-                  <li>Terms & Conditions</li>
-                </ul>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-        <div className="w-full text-white text-center py-3 text-[13px] text-gray-600">
-          © Glitch Brainer 2025. All Rights Reserved
-        </div>
-
-      </div>
-
-    </footer>
-  );
-}*/
 "use client";
+import Navbar from "./Navbar";
 
-export default function Footer() {
+export default function Hero() {
   return (
-    <footer className="w-full bg-[#F8FBFF]">
-
+   <section className="relative w-full h-[860px] xl:h-[920px] overflow-hidden bg-[#F8FBFF]">
       {/* BACKGROUND */}
-      <div
-        className="w-full bg-cover bg-top z-[60]"
-        style={{
-          backgroundImage: "url('/images/footer.png')",
-        }}
-      >
-        {/* CONTENT */}
-        <div className="
-  max-w-[1298px] mx-auto
-  px-6 lg:px-[72px]
-  pt-[160px] md:pt-[190px] lg:pt-[220px]
-  pb-[40px]
-  min-h-[680px]
+     <img
+  src="/images/hero-bg.svg"
+  alt="hero background"
+  className="absolute top-0 left-0 w-full h-[75%] object-cover"
+/>
 
-  flex flex-col
-">
+      {/* NAVBAR */}
+      <Navbar variant="hero" />
 
-          {/* MAIN FLEX */}
-          <div className="
-            flex flex-col lg:flex-row
-            justify-start
-            gap-[60px] md:gap-[80px] lg:gap-[120px]
-          ">
+      {/* HERO CONTAINER */}
+     <div className="relative max-w-[1440px] mx-auto h-full flex items-start pt-[180px] xl:pt-[180px]">
 
-            {/* LEFT BLOCK */}
-            <div className="
-              w-full lg:max-w-[441px]
-              flex flex-col gap-[20px]
-            ">
+        {/* LEFT CONTENT */}
+       <div className="pl-[24px] sm:pl-[32px] md:pl-[42px] text-white max-w-[50%]">
+          {/* HEADING */}
+          <h1
+            className="
+              max-w-[320px] sm:max-w-[520px] xl:max-w-[668px]
 
-              <h2 className="text-white text-[20px] font-semibold">
-                Glitch Brainer
-              </h2>
+              text-[32px] sm:text-[42px] md:text-[48px] xl:text-[60px]
+              font-[700]
+              leading-[130%]
+            "
+          >
+            We Build Scalable AI & Software Systems for Modern Businesses
+          </h1>
 
-              <p className="
-                text-[#B0B8C1]
-                text-[14px]
-                leading-[22px]
-                max-w-[400px]
-              ">
-                We build scalable AI, data, and software solutions that help
-                businesses automate, optimize, and grow.
-              </p>
+          {/* BUTTON */}
+          <button
+            className="
+              mt-[32px] xl:mt-[48px]
 
-              {/* CONTACT */}
-              <div className="flex flex-col gap-[12px] text-[#E5E7EB] text-[14px]">
+              w-[180px] sm:w-[220px] xl:w-[254px]
+              h-[44px] xl:h-[48px]
 
-                <div className="flex items-center gap-2">
-                  <img src="/icons/tdesign_location.png" className="w-[18px]" />
-                  Bengaluru
-                </div>
+              px-[18px]
+              rounded-[12px] xl:rounded-[16px]
 
-                <div className="flex items-center gap-2">
-                  <img src="/icons/proicons_call.png" className="w-[18px]" />
-                  +91 98765 43210
-                </div>
+              bg-white text-[#2F3E4E]
+              text-[14px] xl:text-[16px]
+              font-[500]
 
-                <div className="flex items-center gap-2">
-                  <img src="/icons/material-symbols-light_mail-outline.png" className="w-[18px]" />
-                  hello@Glitchbrainer.com
-                </div>
-              </div>
+              flex items-center justify-center gap-[10px]
 
-              {/* SOCIAL */}
-              <div className="flex gap-3 pt-2">
-                <img src="/icons/Group 90.png" className="w-[32px]" />
-                <img src="/icons/Group 91.png" className="w-[32px]" />
-                <img src="/icons/Group 92.png" className="w-[32px]" />
-                <img src="/icons/Group 93.png" className="w-[32px]" />
-              </div>
-
-              {/* BACK TO TOP */}
-             {/* <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="
-                  mt-4 w-fit
-                  px-5 h-[42px]
-                  bg-white text-[#2F3E4E]
-                  text-[14px]
-                  rounded-[6px]
-                  flex items-center gap-2
-                "
-              >
-                <img src="/icons/iconoir_fast-arrow-up.png" className="w-[18px]" />
-                Back to Top
-              </button>*/}
-
-            </div>
-
-            {/* RIGHT BLOCK */}
-            <div className="
-              w-full lg:max-w-[472px]
-              flex flex-col sm:flex-row
-              gap-[60px] lg:gap-[71px]
-            ">
-
-              {/* SITE MAP */}
-              <div className="flex flex-col gap-[20px] w-[198px]">
-
-                <h3 className="text-white text-[20px] font-semibold">
-                  Site Map
-                </h3>
-
-                <ul className=" flex flex-col gap-[18px] text-[#E5E7EB] text-[16px]">
-                  <li>AI Services</li>
-                  <li>Software Services</li>
-                  <li>Industries We Serve</li>
-                  <li>Team</li>
-                  <li>Contact Us</li>
-                </ul>
-
-              </div>
-
-              {/* LEGAL */}
-              <div className="flex flex-col gap-[18px] w-[203px]">
-
-                <h3 className="text-white text-[20px] font-semibold">
-                  Legal
-                </h3>
-
-                <ul className=" flex flex-col gap-[16px] text-[#E5E7EB] text-[16px]">
-                  <li>Privacy Policy</li>
-                  <li>Terms & Conditions</li>
-                </ul>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* COPYRIGHT */}
-          {/* COPYRIGHT */}
-<div className="
-  text-center text-gray-400
-  text-[13px]
-  mt-auto pt-[40px]
-  font-Public 
-">
-  © Glitch Brainer 2025. All Rights Reserved
-</div>
+              hover:scale-[1.05]
+              transition-all
+            "
+          >
+            Lets Talk →
+          </button>
 
         </div>
-      </div>
 
-    </footer>
+        {/* RIGHT IMAGE */}
+  <div className="flex-1 flex justify-end pointer-events-none"> <img src="/images/hero.svg" alt="AI hand"
+   className=" w-full max-w-[1400px] scale-[1.15] md:scale-[1.25] 
+   xl:scale-[1.35] translate-x-[-60px] md:translate-x-[-120px]
+    xl:translate-x-[-120px]
+   translate-y-[-40px] xl:translate-y-[-120px] 
+   rotate-[6deg] xl:rotate-[-5deg] " /> </div>
+    </div>
+    </section>
   );
 }

@@ -1,10 +1,13 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar({ variant = "default" }) {
   const pathname = usePathname();
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const isHome = pathname === "/";
@@ -23,100 +26,126 @@ export default function Navbar({ variant = "default" }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [variant]);
- const navItemClass = (path) => `
-  flex items-center justify-center
-  h-[32px] xl:h-[36px]
-  px-[16px]
-  rounded-[24px]
-  text-[13px] xl:text-[14px]
-  font-[500]
-  whitespace-nowrap
-  transition-all duration-300
-  ${
-    pathname === path
-      ? "bg-[#334155] text-white"
-      : "text-[#2F3E4E]"
-  }
-`;
+
+  const navItemClass = (path) => `
+    flex items-center justify-center
+    h-[32px] xl:h-[36px]
+    px-[16px]
+    rounded-[24px]
+    text-[13px] xl:text-[14px]
+    font-[500]
+    whitespace-nowrap
+    transition-all duration-300
+    ${
+      pathname === path
+        ? "bg-[#334155] text-white"
+        : "text-[#2F3E4E]"
+    }
+  `;
+
   return (
-<nav
- className={`
-  w-full h-[180px] xl:h-[213px] z-50 
-  ${
-   variant === "hero"
-    ? scrolled
-     ? "fixed top-0 left-0"
-     : "absolute top-0 left-0"
-    : "fixed top-0 left-0"
-  }
- ${isHome && !scrolled ? "bg-transparent" : scrolled ? "bg-transparent" : "bg-[#F8FBFF]"}
- `}
->
-   {(!isHome || scrolled) && (
-    <img
-     src="/images/nav-bag.svg"
-     alt="nav bg"
-     className="absolute top-0 left-0 w-full h-[120%] object-cover z-0"
-    />
-   )}
-      <div className="relative z-10 w-full h-full max-w-[1440px] mx-auto">
-        <Link
-          href="/"
-          className="absolute top-[28px] xl:top-[32px] left-[20px] xl:left-[37px] z-20"
-        >
+    <>
+      {/* NAVBAR */}
+      <nav
+        className={`
+          w-full z-50 h-[110px] xl:h-[200px]
+          ${
+            variant === "hero"
+              ? scrolled
+                ? "fixed top-0 left-0"
+                : "absolute top-0 left-0"
+              : "fixed top-0 left-0"
+          }
+          bg-transparent
+          overflow-hidden
+        `}
+      >
+        {/* ✅ SVG BACKGROUND (FIXED + FIGMA MATCH) */}
+        {(!isHome || scrolled) && (
           <img
-            src="/icons/Logo.svg"
-            alt="logo"
-            className="w-[150px] xl:w-[196px] h-auto"
+            src="/images/nav-bag.svg"
+            alt="nav bg"
+            className="
+              absolute 
+              -top-[2px] left-0 
+              w-full h-[110%] xl:h-[120%] 
+              object-cover 
+              object-top
+              pointer-events-none 
+              select-none
+            "
+            draggable={false}
           />
-        </Link>
-        <div className="absolute top-[30px] xl:top-[33px] left-1/2 -translate-x-1/2 z-10">
-     <div
-  className="
-    flex items-center
-    h-[44px] xl:h-[48px]
-    px-[8px]
-    gap-[8px] xl:gap-[12px]
-    bg-white
-    rounded-[50px]
-    shadow-sm
-    w-fit
-  "
->
-            <Link href="/ai-services" className={navItemClass("/ai-services")}>
-              AI
-            </Link>
+        )}
 
-            <Link href="/services" className={navItemClass("/services")}>
-              Services
-            </Link>
+        {/* CONTENT */}
+        <div className="relative max-w-[1440px] mx-auto h-full flex items-start justify-between px-4 sm:px-6 lg:px-10 xl:px-16 pt-4">
 
-            <Link href="/our-work" className={navItemClass("/our-work")}>
-              Our Work
-            </Link>
+          {/* LOGO */}
+          <Link href="/">
+            <img
+              src="/icons/Logo.svg"
+              alt="logo"
+              className="h-[32px] xl:h-[44px]"
+            />
+          </Link>
 
-            <Link href="/team" className={navItemClass("/team")}>
-              Team
-            </Link>
+          {/* DESKTOP MENU */}
+          <div className="hidden lg:flex items-center bg-white rounded-[50px] px-4 py-2 shadow-sm gap-4">
+            <Link href="/ai-services" className={navItemClass("/ai-services")}>AI</Link>
+            <Link href="/services" className={navItemClass("/services")}>Services</Link>
+            <Link href="/our-work" className={navItemClass("/our-work")}>Our Work</Link>
+            <Link href="/team" className={navItemClass("/team")}>Team</Link>
           </div>
-        </div>
-        <Link
-          href="/contact-us"
-          className="
-            absolute top-[30px] xl:top-[33px] right-[20px] xl:right-[37px]
-            w-[150px] lg:w-[180px] xl:w-[224px]
-            h-[44px] xl:h-[48px]
-            flex items-center justify-center
-            bg-white text-[#334155]
-            rounded-[14px] xl:rounded-[16px]
-            text-[13px] lg:text-[14px] xl:text-[16px]
-            font-[600]
-          "
-        >
-          Contact Us
-        </Link>
 
+          {/* CONTACT */}
+          <Link
+            href="/contact-us"
+            className="hidden lg:flex items-center justify-center bg-white px-4 py-2 rounded-lg shadow-sm"
+          >
+            Contact Us
+          </Link>
+
+          {/* MOBILE MENU BUTTON */}
+          <button className="lg:hidden" onClick={() => setSidebarOpen(true)}>
+            <img src="/icons/sidebar.svg" className="w-6 h-6" />
+          </button>
+        </div>
+      </nav>
+
+      {/* SIDEBAR */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[75%] max-w-[300px] bg-white z-[9999] transition-transform duration-300 ${
+          sidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-end p-4 text-[#1E293B]">
+          <button onClick={() => setSidebarOpen(false)}>✕</button>
+        </div>
+
+        <div className="flex flex-col gap-5 px-6 mt-4 text-[#1E293B]">
+          <Link href="/ai-services" onClick={() => setSidebarOpen(false)}>AI</Link>
+          <Link href="/services" onClick={() => setSidebarOpen(false)}>Services</Link>
+          <Link href="/our-work" onClick={() => setSidebarOpen(false)}>Our Work</Link>
+          <Link href="/team" onClick={() => setSidebarOpen(false)}>Team</Link>
+
+          <Link
+            href="/contact-us"
+            onClick={() => setSidebarOpen(false)}
+            className="bg-[#334155] text-white px-4 py-2 rounded-lg text-center"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
-    </nav>
+
+      {/* OVERLAY */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 z-[9998]"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+    </>
   );
 }
