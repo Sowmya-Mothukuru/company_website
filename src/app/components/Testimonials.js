@@ -1,5 +1,26 @@
 "use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+// ✅ SAME animation configs
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const testimonials = [
   {
@@ -26,15 +47,24 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative bg-[#F8FBFF] py-16 sm:py-20 md:py-24 flex flex-col items-center overflow-hidden">
+    <motion.section
+      className="relative bg-[#F8FBFF] py-16 sm:py-20 md:py-24 flex flex-col items-center overflow-hidden"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
 
       {/* Title */}
-      <h2 className="text-[24px] sm:text-[30px] md:text-[36px] font-bold mb-10 sm:mb-12 md:mb-16 font-[Space_Grotesk]">
+      <motion.h2
+        variants={fadeUp}
+        className="text-[24px] sm:text-[30px] md:text-[36px] font-bold mb-10 sm:mb-12 md:mb-16 font-[Space_Grotesk]"
+      >
         Testimonials
-      </h2>
+      </motion.h2>
 
       {/* Scroll Container */}
-      <div className="w-full overflow-hidden touch-pan-x">
+      <motion.div variants={fadeUp} className="w-full overflow-hidden touch-pan-x">
 
         {/* Background Blob */}
         <img
@@ -44,25 +74,21 @@ export default function Testimonials() {
             absolute
             top-[1rem] sm:top-[1.5rem] md:top-[2rem]
             left-[-3rem] sm:left-[-4rem] md:left-[-5rem] lg:left-[-6rem]
-
             w-[12rem] sm:w-[18rem] md:w-[22rem] lg:w-[25.125rem] xl:w-[28rem]
-
             h-auto opacity-30 z-0 pointer-events-none
           "
         />
 
-       <div className="flex gap-[16px] sm:gap-[20px] md:gap-[30px] w-max animate-scrollTestimonials">
+        <div className="flex gap-[16px] sm:gap-[20px] md:gap-[30px] w-max animate-scrollTestimonials">
 
           {[...testimonials, ...testimonials, ...testimonials].map((item, index) => (
-            
+
             <div
               key={index}
               className="
                 group flex-shrink-0 flex
-
-                w-[720px] sm:w-[720px] md:w-[720px] lg:w-[820px] xl:w-[873px] lg:w-[820px] xl:w-[873px]
+                w-[720px] sm:w-[720px] md:w-[720px] lg:w-[820px] xl:w-[873px]
                 min-h-[280px] sm:min-h-[320px] md:min-h-[411px]
-
                 bg-white border border-gray-300 rounded-[30px] sm:rounded-[35px] md:rounded-[41.59px]
                 overflow-hidden
                 hover:border-blue-500 transition-all duration-300
@@ -148,8 +174,8 @@ export default function Testimonials() {
 
         </div>
 
-      </div>
+      </motion.div>
 
-    </section>
+    </motion.section>
   );
 }

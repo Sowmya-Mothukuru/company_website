@@ -1,4 +1,27 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+// ✅ SAME animation configs
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function SoftwareServices() {
   const services = [
     {
@@ -40,12 +63,21 @@ export default function SoftwareServices() {
   ];
 
   return (
-    <section className="w-full bg-[#F8FBFF] flex justify-center pb-[80px] lg:pb-[100px] -mt-[2px]">
+    <motion.section
+      className="w-full bg-[#F8FBFF] flex justify-center pb-[80px] lg:pb-[100px] -mt-[2px]"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
 
       <div className="w-full max-w-[1254px] px-6 flex flex-col items-center pt-[30px] md:pt-[80px]">
 
         {/* 🔹 TITLE */}
-        <div className="w-full max-w-[963px] flex flex-col items-center gap-[16px] md:gap-[28px] px-4">
+        <motion.div
+          variants={fadeUp}
+          className="w-full max-w-[963px] flex flex-col items-center gap-[16px] md:gap-[28px] px-4"
+        >
 
           <h2 className="font-['Space_Grotesk'] font-bold text-[26px] md:text-[32px] lg:text-[36px] text-black text-center">
             Software Services
@@ -55,10 +87,13 @@ export default function SoftwareServices() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-        </div>
+        </motion.div>
 
         {/* 🔹 CARDS */}
-        <div className="mt-[40px] md:mt-[60px] lg:mt-[82px] w-full">
+        <motion.div
+          variants={container}
+          className="mt-[40px] md:mt-[60px] lg:mt-[82px] w-full"
+        >
 
           <div className="
             grid
@@ -72,68 +107,72 @@ export default function SoftwareServices() {
             ))}
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 
 
 function Card({ service }) {
   return (
-    <Link href={service.link || "#"} className="w-full">
-    <div
-      className="
-      group
-      w-full
-      min-h-[280px] md:min-h-[300px] lg:min-h-[320px]
-      bg-white
-      rounded-[16px] md:rounded-[20px]
-      px-[20px] py-[24px] md:p-[28px] lg:p-[32px]
-      flex flex-col items-center text-center
-      transition-all duration-300
-      hover:bg-[#2E3B4E]
-      hover:shadow-xl
-      "
-      style={{ boxShadow: "0px 2px 6px rgba(0,0,0,0.1)" }}
-    >
+    <motion.div variants={fadeUp}> {/* ✅ animation wrapper */}
 
-      {/* IMAGE */}
-      <div className="mb-[16px] md:mb-[20px] flex justify-center">
-        <img
-          src={service.image}
-          alt={service.title}
-          className="h-[150px] md:h-[130px] lg:h-[140px] object-contain"
-        />
-      </div>
+      <Link href={service.link || "#"} className="w-full">
+        <div
+          className="
+          group
+          w-full
+          min-h-[280px] md:min-h-[300px] lg:min-h-[320px]
+          bg-white
+          rounded-[16px] md:rounded-[20px]
+          px-[20px] py-[24px] md:p-[28px] lg:p-[32px]
+          flex flex-col items-center text-center
+          transition-all duration-300
+          hover:bg-[#2E3B4E]
+          hover:shadow-xl
+          "
+          style={{ boxShadow: "0px 2px 6px rgba(0,0,0,0.1)" }}
+        >
 
-      {/* TITLE */}
-      <h3 className="
-        font-['Space_Grotesk']
-        text-[18px] md:text-[20px] lg:text-[22px]
-        font-bold
-        text-black
-        group-hover:text-white
-        transition-colors
-      ">
-        {service.title}
-      </h3>
+          {/* IMAGE */}
+          <div className="mb-[16px] md:mb-[20px] flex justify-center">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="h-[150px] md:h-[130px] lg:h-[140px] object-contain"
+            />
+          </div>
 
-      {/* DESCRIPTION */}
-      <p className="
-        mt-[8px] md:mt-[10px] lg:mt-[12px]
-        text-[13px] md:text-[14px]
-        text-[#6B7280]
-        leading-[20px] md:leading-[22px]
-        max-w-[260px]
-        group-hover:text-[#D1D5DB]
-        transition-colors
-      ">
-        {service.description}
-      </p>
+          {/* TITLE */}
+          <h3 className="
+            font-['Space_Grotesk']
+            text-[18px] md:text-[20px] lg:text-[22px]
+            font-bold
+            text-black
+            group-hover:text-white
+            transition-colors
+          ">
+            {service.title}
+          </h3>
 
-    </div>
-    </Link>
+          {/* DESCRIPTION */}
+          <p className="
+            mt-[8px] md:mt-[10px] lg:mt-[12px]
+            text-[13px] md:text-[14px]
+            text-[#6B7280]
+            leading-[20px] md:leading-[22px]
+            max-w-[260px]
+            group-hover:text-[#D1D5DB]
+            transition-colors
+          ">
+            {service.description}
+          </p>
+
+        </div>
+      </Link>
+
+    </motion.div>
   );
 }

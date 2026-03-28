@@ -1,8 +1,35 @@
 "use client";
 
+import { motion } from "framer-motion";
+
+// ✅ SAME animation configs
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#F8FBFF] pt-10 -mt-[2px]">
+    <motion.footer
+      className="w-full bg-[#F8FBFF] pt-10 -mt-[2px]"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
 
       {/* FULL WIDTH BACKGROUND */}
       <div
@@ -13,19 +40,23 @@ export default function Footer() {
       >
 
         {/* CONTENT CONTAINER */}
-        <div className="max-w-[1298px] mx-auto px-6 lg:px-[72px] pt-[200px] pb-[80px]">
-        {/* ↑ increased from 140px → 200px */}
+        <motion.div
+          variants={container}
+          className="max-w-[1298px] mx-auto px-6 lg:px-[72px] pt-[200px] pb-[80px]"
+        >
 
           <div className="flex flex-wrap lg:flex-nowrap justify-between gap-[60px]">
 
             {/* LEFT */}
-            <div className="max-w-[441px] flex flex-col gap-[24px]">
+            <motion.div
+              variants={fadeUp}
+              className="max-w-[441px] flex flex-col gap-[24px]"
+            >
 
               <h2 className="text-white text-[20px] font-semibold">
                 Glitch Brainer
               </h2>
 
-              {/* Hidden on mobile, visible on md+ */}
               <p className="hidden md:block text-[#B0B8C1] text-[14px] leading-[22px]">
                 We build scalable AI, data, and software solutions that help
                 businesses automate, optimize, and grow.
@@ -55,20 +86,15 @@ export default function Footer() {
                 <img src="/icons/Group 93.png" className="w-[36px]" />
               </div>
 
-              {/* <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="mt-4 w-fit px-5 h-[44px] bg-white text-[#2F3E4E] text-[14px] rounded-[6px] flex items-center gap-2"
-              >
-                <img src="/icons/iconoir_fast-arrow-up.png" className="w-[20px]" />
-                Back to Top
-              </button> */}
-
-            </div>
+            </motion.div>
 
             {/* RIGHT */}
-            <div className="flex flex-col sm:flex-row gap-[80px]">
+            <motion.div
+              variants={container}
+              className="flex flex-col sm:flex-row gap-[80px]"
+            >
 
-              <div className="flex flex-col gap-[20px]">
+              <motion.div variants={fadeUp} className="flex flex-col gap-[20px]">
                 <h3 className="text-white text-[20px] font-semibold">
                   Site Map
                 </h3>
@@ -80,9 +106,9 @@ export default function Footer() {
                   <li>Team</li>
                   <li>Contact Us</li>
                 </ul>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-col gap-[20px]">
+              <motion.div variants={fadeUp} className="flex flex-col gap-[20px]">
                 <h3 className="text-white text-[20px] font-semibold">
                   Legal
                 </h3>
@@ -91,21 +117,24 @@ export default function Footer() {
                   <li>Privacy Policy</li>
                   <li>Terms & Conditions</li>
                 </ul>
-              </div>
+              </motion.div>
 
-            </div>
+            </motion.div>
 
           </div>
 
-        </div>
+        </motion.div>
 
         {/* BOTTOM BAR */}
-        <div className="w-full text-white text-center py-3 text-[13px] text-gray-600">
+        <motion.div
+          variants={fadeUp}
+          className="w-full text-white text-center py-3 text-[13px] text-gray-600"
+        >
           © Glitch Brainer 2025. All Rights Reserved
-        </div>
+        </motion.div>
 
       </div>
 
-    </footer>
+    </motion.footer>
   );
 }
