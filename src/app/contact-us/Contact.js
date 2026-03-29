@@ -156,6 +156,7 @@ const ContactCard = () => {
       {/* MAIN OUTER CONTAINER */}
       <motion.div
         variants={container}
+        id="contact-us"
         className="
           max-w-[1257px] mx-auto w-full 
           px-4 sm:px-6
